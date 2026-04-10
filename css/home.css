@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    background: #fffdff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Menu Button */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.menu-btn svg {
+    width: 26px;
+    height: 26px;
+    color: #333;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.campus-shop {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    font-family: bebas-neue, sans-serif;
+}
+
+/* Nav */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Search */
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background: #366bb6;
+    border-bottom: 1px solid #5bacc3;
+}
+
+.search input {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #3582a6;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background: #4c94e0;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+.search-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.nav a:hover svg,
+.menu-btn:hover svg,
+.search-btn:hover svg {
+    color: #1a5a8e;
+    transition: 0.2s ease;
+    transform: scale(1.15);
+}
