@@ -29,7 +29,20 @@ body {
     background: #4B0082;
     border-bottom: 1px solid #e0e0e0;
 }
+/* Ocultar checkbox */
+.menu-toggle {
+    display: none;
+}
+.header {
+    position: relative;
+    z-index: 1500;
+}
 
+.menu-btn {
+    position: relative;
+    z-index: 2000; 
+    cursor: pointer;
+}
 /* Menu Button */
 .menu-btn {
     background: none;
@@ -147,20 +160,7 @@ body {
     transition: 0.2s ease;
     transform: scale(1.15);
 }
-/* Ocultar checkbox */
-.menu-toggle {
-    display: none;
-}
-.header {
-    position: relative;
-    z-index: 1500;
-}
 
-.menu-btn {
-    position: relative;
-    z-index: 2000; 
-    cursor: pointer;
-}
 /* Sidebar */
 .sidebar {
     position: fixed;
