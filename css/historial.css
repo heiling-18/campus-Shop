@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f3f4f6);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg,#4B0082,#4B0082);
+    color: white;
+    position: relative;
+    z-index: 1500;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+}
+
+.campus-shop {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* MENU BUTTON */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn svg {
+    color: white;
+    width: 26px;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    gap: 12px;
+}
+
+.cart svg {
+    color: white;
+    transition: 0.3s;
+}
+
+.cart:hover svg {
+    color: #a5b4fc;
+    transform: scale(1.2);
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background: #44a7d8;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.menu-toggle:checked ~ .sidebar {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 18px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color:#F3F4F6    ;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+    color:#4B0082;
+}
+
+.sidebar a svg {
+    width: 22px;
+    height: 22px;
+    color: #F3F4F6;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover svg {
+    color: #4B0082;
+}
+.menu-toggle {
+    display: none;
+}
+.header {
+    position: relative;
+    z-index: 1500;
+}
+
+.menu-btn {
+    position: relative;
+    z-index: 2000; 
+    cursor: pointer;
+}
+.nav a:hover svg,
+.menu-btn:hover svg,
+.search-btn:hover svg {
+    color:#7fc6e2;
+    transition: 0.2s ease;
+    transform: scale(1.15);
+}
+
+/* HISTORIAL */
+.historial-container {
+    padding: 30px;
+}
+
+.titulo {
+    font-size: 26px;
+    font-weight: bold;
+    color:#4B0082;
+    margin-bottom: 25px;
+}
+
+/* TARJETAS */
+.pedido {
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border-left: 6px solid #4B0082;
+}
+
+.pedido:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.pedido h3 {
+    font-size: 18px;
+    color: #1e293b;
+}
+
+.precio {
+    font-size: 17px;
+    font-weight: bold;
+    color:#4B0082;
+    margin: 5px 0;
+}
+
+.fecha {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* ESTADOS */
+.estado {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.entregado {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.camino {
+    background: #fef9c3;
+    color: #ca8a04;
+}
+
+.cancelado {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* BOTON */
+.detalle {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    background: #2563eb;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.detalle:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}

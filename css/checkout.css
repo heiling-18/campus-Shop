@@ -20,17 +20,6 @@ body {
     background: #4B0082;
     border-bottom: 1px solid #e0e0e0;
 }
-.contenido {
-    min-height: calc(100vh - 70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-    padding-top: 20px; 
-}
-.perfil-container {
-    margin-top: 40px;
-}
 /* Ocultar checkbox */
 .menu-toggle {
     display: none;

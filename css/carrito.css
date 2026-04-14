@@ -124,8 +124,6 @@ body {
 .nav .btn:active svg {
     color: #7fc6e2;
 }
-
-
 .nav a:hover svg,
 .menu-btn:hover svg,
 .search-btn:hover svg {
