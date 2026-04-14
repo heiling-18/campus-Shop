@@ -317,27 +317,27 @@ body {
     text-align: center;
 }
 
-.heart-container {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    cursor: pointer;
-}
-
-.heart-btn svg {
+.heart-container svg {
     width: 28px;
     height: 28px;
     color: #aaa;
-    transition: 0.2s;
+    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .like-checkbox {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width:0px;
+    height: 0;
 }
 
 .like-checkbox:checked + .heart-btn svg {
-    color: #e0245e;
+    color: #e0245e !important;
 }
+
 /*titulos*/
 h1 {
     font-size: 35px;
@@ -345,7 +345,7 @@ h1 {
     color: #333;
     margin: 20px;
     text-align: center;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Inter', sans-serif;
 }
 .titulo-destacados {
     font-size: 26px;
