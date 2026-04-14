@@ -274,3 +274,20 @@ header {
     font-weight: bold;
     color: #4C1D95;
 }
+.btn-detalles {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background: #4B0082;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn-detalles:hover {
+    background: #7fc6e2;
+    color: #4B0082;
+    transform: scale(1.05);
+}
