@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F3F4F6;
+    font-family: "Inter", sans-serif;
+    background: #F5F5F7;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    background: #4B0082;
+    border-bottom: 1px solid #e0e0e0;
+}
+.contenido {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    padding-top: 20px; 
+}
+.perfil-container {
+    margin-top: 40px;
+}
+/* Ocultar checkbox */
+.menu-toggle {
+    display: none;
+}
+.header {
+    position: relative;
+    z-index: 1500;
+}
+
+.menu-btn {
+    position: relative;
+    z-index: 2000; 
+    cursor: pointer;
+}
+/* Menu Button */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.menu-btn svg {
+    width: 26px;
+    height: 26px;
+    color: #F3F4F6;
+}
+.cart svg {
+    color: #F3F4F6;
+    transition: 0.2s ease;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.campus-shop {
+    font-size: 20px;
+    font-weight: bold;
+    color: #F3F4F6;
+    font-family: "Bebas Neue", cursive;
+}
+
+/* Nav */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav .btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #F3F4F6;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.nav .btn svg {
+    color: #F3F4F6;
+    transition: 0.2s ease;
+}
+.nav .btn:hover {
+    color: #7fc6e2;
+}
+
+.nav .btn:hover svg {
+    color: #7fc6e2;
+}
+.nav .btn:active {
+    background: rgba(75, 0, 130, 0.15);
+    border-color: #7fc6e2;
+    color: #7fc6e2;
+}
+
+.nav .btn:active svg {
+    color: #7fc6e2;
+}
+
+
+.nav a:hover svg,
+.menu-btn:hover svg,
+.search-btn:hover svg {
+    color:#7fc6e2;
+    transition: 0.2s ease;
+    transform: scale(1.15);
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background: #44a7d8;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.menu-toggle:checked ~ .sidebar {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 18px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color:#F3F4F6    ;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+    color:#4B0082;
+}
+
+.sidebar a svg {
+    width: 22px;
+    height: 22px;
+    color: #F3F4F6;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover svg {
+    color: #4B0082;
+}
+/* Carrito */
+.carrito {
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: Inter, sans-serif;
+}
+
+.carrito h2 {
+    margin-bottom: 20px;
+    color: #4C1D95;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.info p {
+    margin: 2px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.btn {
+    background: #EDE9FE;
+    color: #5B21B6;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.precio {
+    margin-left: auto;
+    font-weight: bold;
+    color: #4C1D95;
+}
+
+.totales {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.totales p {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+
+.total {
+    font-size: 17px;
+    font-weight: bold;
+    color: #4C1D95;
+}
+.cantidad .btn:hover {
+    background: #7fc6e2;
+    color: #4C1D95;
+    transition: 0.2s ease;
+}
+.btn-pay {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #3B82F6;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 18px;
+    font-size: 14px;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-pay:hover {
+    background: #2563EB;
+}
