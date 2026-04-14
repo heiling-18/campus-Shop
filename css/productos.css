@@ -27,7 +27,7 @@ body {
 .header-back {
     display: flex;
     align-items: center;
-    color: #1a1a1a;
+    color:  #4B0082;
     text-decoration: none;
     padding: 6px;
     border-radius: 50%;
@@ -46,7 +46,7 @@ body {
 .header-cart {
     display: flex;
     align-items: center;
-    color: #1a1a1a;
+    color:  #4B0082;
     text-decoration: none;
     padding: 6px;
 }
@@ -153,8 +153,8 @@ body {
 
 .size-btn:hover,
 .size-btn:has(input:checked) {
-    border-color: #1a1a1a;
-    background: #1a1a1a;
+    border-color:  #4B0082;
+    background: #4B0082;
     color: #fff;
 }
 
@@ -163,7 +163,7 @@ body {
     display: block;
     width: 100%;
     padding: 17px;
-    background: #1a1a1a;
+    background: #4B0082;
     color: #fff;
     border: none;
     border-radius: 14px;
@@ -178,7 +178,7 @@ body {
 }
 
 .add-to-cart:hover {
-    background: #333;
+    background: #44a7d8;
 }
 
 .add-to-cart:active {
@@ -257,7 +257,7 @@ body {
     width: 38px;
     height: 38px;
     border: none;
-    background: #1a1a1a;
+    background: #4B0082;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -267,7 +267,7 @@ body {
 }
 
 .qty-btn:hover {
-    background: #333;
+    background:#44a7d8;
 }
 
 .qty-display {
@@ -275,6 +275,9 @@ body {
     font-weight: 600;
     min-width: 20px;
     text-align: center;
+}
+.span svg:hover {
+    fill: #44a7d8;
 }
 /* ── RESPONSIVO - TABLET ── */
 @media (min-width: 600px) {
