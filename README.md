@@ -5,62 +5,99 @@
 ---
 
 ##  Estructura del proyecto
-
 ```
-campus-shop/
+campus-shop
 │
-├── index.html          # Página de inicio (Home)
-├── iniciosesion.html   # Login de usuario
-├── catalogo.html       # Catálogo de productos
-├── carrito.html        # Carrito de compras
-├── checkout.html       # Proceso de pago
-├── historial.html      # Historial de pedidos
-├── perfil.html         # Perfil del usuario
-├── vacio.html          # Vista de carrito vacío
-│
-├── css/                # Estilos por vista
-│   ├── home.css
-│   ├── iniciosesion.css
-│   ├── catalogo.css
+├── 📁 css
 │   ├── carrito.css
+│   ├── catalogo.css
 │   ├── checkout.css
 │   ├── historial.css
+│   ├── home.css
+│   ├── iniciosesion.css
 │   ├── perfil.css
+│   ├── productos.css
 │   └── vacio.css
 │
-└── img/                # Imágenes de productos y logo
+├── 📁 img
+│   └── (imágenes del proyecto)
+│
+├── 📁 productos
+│   ├── calculadora.html
+│   ├── detalle-alcohol.html
+│   ├── detalle-almohada.html
+│   ├── detalle-arroz.html
+│   ├── detalle-audifonos.html
+│   ├── detalle-botiquin.html
+│   ├── detalle-cafe.html
+│   ├── detalle-camisa.html
+│   ├── detalle-cargador.html
+│   ├── detalle-cepillo.html
+│   ├── detalle-cobija.html
+│   ├── detalle-cuaderno.html
+│   ├── detalle-diadema.html
+│   ├── detalle-gel-antibacterial.html
+│   ├── detalle-humidificador.html
+│   ├── detalle-jabones.html
+│   ├── detalle-jersei.html
+│   ├── detalle-lapices.html
+│   ├── detalle-libro.html
+│   ├── detalle-papa.html
+│   ├── detalle-resaltadores.html
+│   ├── detalle-sueter.html
+│   └── detalle-venda.html
+│
+├── carrito.html
+├── catalogo.html
+├── checkout.html
+├── historial.html
+├── index.html
+├── iniciosesion.html
+├── perfil.html
+├── vacio.html
+└── README.md
 ```
-
 ---
 
 ##  Flujo de navegación
+```
+Inicio (index.html)
+│
+├── Iniciar sesión (iniciosesion.html)
+│
+├── Catálogo (catalogo.html)
+│   │
+│   ├── Categorías
+│   │   ├── Tecnología
+│   │   ├── Estudio
+│   │   ├── Confort
+│   │   ├── Comida
+│   │   ├── Higiene
+│   │   ├── Ropa
+│   │   └── Primeros auxilios
+│   │
+│   └── Detalle de producto (productos/*.html)
+│
+├── Carrito (carrito.html)
+│   │
+│   ├── Carrito con productos
+│   │   └── Checkout (checkout.html)
+│   │
+│   └── Carrito vacío (vacio.html)
+│
+├── Perfil (perfil.html)
+│
+└── Historial de pedidos (historial.html)
+```
+---
 
-```
-iniciosesion.html
-      │
-      ▼
-  index.html  ──────────────────────────────────────┐
-      │                                              │
-      ├──▶ catalogo.html ──▶ [detalle producto]     │
-      │                            │                 │
-      │                            ▼                 │
-      ├──▶ carrito.html ──▶ checkout.html            │
-      │         │                                    │
-      │    vacio.html                                │
-      │                                              │
-      ├──▶ historial.html                            │
-      └──▶ perfil.html ◀─────────────────────────────┘
-```
+##  Vistas y Mockups
+
+A continuación se documenta cada pantalla del proyecto junto con su diseño original en mockup .
 
 ---
 
-## 📱 Vistas y Mockups
-
-A continuación se documenta cada pantalla del proyecto junto con su diseño original en mockup (boceto a mano).
-
----
-
-### 1. 🏠 Inicio — `index.html`
+### 1. Inicio — `index.html`
 
 La página principal muestra:
 - **Header** con hamburger menu, logo de Campus Shop, botón de inicio de sesión y carrito.
@@ -71,15 +108,15 @@ La página principal muestra:
 - **Sección "Los más populares en Tecnología"** con productos como portátiles, audífonos, cargadores y vidrios templados.
 - **Footer** con secciones: Conócenos, Gana Dinero, Pagos, Ayuda.
 
-#### 📝 Mockup — Inicio
+####  Mockup — Inicio
 
 > El boceto muestra el layout general: header con hamburger, logo y carrito/login, barra de búsqueda, fila de categorías con íconos (Estudio, Tecnología, Confort, Comida), grid de productos con nombre y precio, y carrusel de tecnología al fondo.
 
-![Mockup Inicio](mockup_inicio.png)
+![Mockup Inicio](img/inicio.jpeg)
 
 ---
 
-### 2. 🔐 Inicio de Sesión — `iniciosesion.html`
+### 2. Inicio de Sesión — `iniciosesion.html`
 
 Vista de autenticación con:
 - Campo de **correo electrónico**.
@@ -91,7 +128,7 @@ Vista de autenticación con:
 
 ---
 
-### 3. 📋 Menú lateral — Sidebar
+### 3. Menú lateral — Sidebar
 
 Presente en casi todas las vistas. Contiene:
 
@@ -106,7 +143,7 @@ Presente en casi todas las vistas. Contiene:
 
 > El boceto muestra el menú desplegable lateral con los cuatro ítems alineados verticalmente: Inicio, Mi cuenta, Catálogo, Pedidos, cada uno con su ícono a la izquierda.
 
-![Mockup Sidebar](mockup_sidebar.png)
+![Mockup Sidebar](img/lateral.jpeg)
 
 ---
 
@@ -127,7 +164,7 @@ Muestra los productos que el usuario ha agregado:
 
 > El boceto detalla las tarjetas de producto con imagen, nombre, referencia y controles de cantidad a la izquierda, y el precio a la derecha. Abajo aparece el bloque de totales con Subtotal, Impuestos y Total, y el botón de pago.
 
-![Mockup Carrito](mockup_carrito.png)
+![Mockup Carrito](img/WhatsApp%20Image%202026-04-15%20at%2009.24.44.jpeg)
 
 ---
 
@@ -156,7 +193,7 @@ Botón final: **"Pagar $5.000"**
 
 > El boceto muestra los campos de envío (nombre, dirección, ciudad) como inputs con placeholders, luego los tres métodos de pago como opciones de radio con íconos, seguidos del resumen de ítems y el botón de pago al fondo.
 
-![Mockup Checkout](mockup_checkout.png)
+![Mockup Checkout](img/checkput.jpeg)
 
 ---
 
@@ -176,7 +213,7 @@ Cada tarjeta incluye un enlace **"Ver detalle"**.
 
 > El boceto muestra tres tarjetas de pedido apiladas verticalmente. Cada una tiene el estado (Entregado ✓, En camino 🚚, Procesando 🔄), número de orden, fecha y total. Un botón `>` indica la acción de ver detalle.
 
-![Mockup Historial](mockup_historial.png)
+![Mockup Historial](img/historial.jpeg)
 
 ---
 
@@ -202,7 +239,7 @@ Vista del perfil de usuario con:
 
 > El boceto muestra el avatar circular en la parte superior, debajo el nombre del usuario y datos (usuario, fecha de membresía, ubicación), el botón de editar, y las opciones de cuenta como bloques/filas con íconos a la izquierda.
 
-![Mockup Perfil](mockup_perfil.png)
+![Mockup Perfil](img/perfiñ.jpeg)
 
 ---
 
@@ -218,7 +255,7 @@ Vista alternativa cuando no hay productos en el carrito:
 
 > El boceto muestra el header de Campus Shop con íconos de carrito y alerta, luego en el centro el ícono de carrito vacío con X, el mensaje de estado y el botón de explorar productos.
 
-![Mockup Vacio](mockup_vacio.png)
+![Mockup Vacio](img/vacio.jpeg)
 
 ---
 
@@ -236,7 +273,7 @@ Pantalla planificada en el mockup (no incluida como archivo independiente aún):
 
 > El boceto muestra la imagen del producto centrada, debajo el nombre y precio, una descripción corta, los botones de color como chips, el CTA de agregar al carrito, y un carrusel con productos similares.
 
-![Mockup Detalle](mockup_detalle.png)
+![Mockup Detalle](img/detalle.jpeg)
 
 ---
 
@@ -260,9 +297,3 @@ Menú lateral deslizable activado por el checkbox `#menu-toggle`. Incluye los cu
 - **SVG inline** — íconos vectoriales sin dependencias externas.
 
 ---
-
-## 👩Autora
-
-**Heiling León** — @heilingleon  
-Proyecto Campus Shop · 2026  
-Floridablanca, Santander, Colombia
