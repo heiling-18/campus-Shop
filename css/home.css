@@ -337,7 +337,33 @@ body {
 .like-checkbox:checked + .heart-btn svg {
     color: #e0245e !important;
 }
-
+.badge-oferta {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e0245e;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase;
+    z-index: 2000;
+}
+.badge-stock {
+    position: absolute;
+    top: 15
+    px;
+    right: 15px; 
+    background: #f59e0b;
+    color: white;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase;
+    z-index: 1200;
+}
 /*titulos*/
 h1 {
     font-size: 35px;
@@ -375,6 +401,7 @@ h1 {
     align-items: center;
     gap: 12px;
     transition: 0.2s ease;
+    position: relative;
 }
 
 /* HOVER */

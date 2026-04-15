@@ -41,22 +41,31 @@ body {
 .like-checkbox:checked + .heart-btn svg {
     color: #e0245e !important;
 }
-.badge-oferta,
-.badge-stock {
+.badge-oferta {
     position: absolute;
-    top: 10px;
-    right: 50px; /* espacio para no chocar con el corazón */
+    top: 15px;
+    right: 15px; 
+    background: #e0245e;
+    color: #fff;
     padding: 4px 10px;
     font-size: 12px;
     font-weight: 700;
     border-radius: 6px;
     text-transform: uppercase;
     z-index: 2000;
-
-    /* FORZAR que siempre sea visible */
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: inline-block !important;
+}
+.badge-stock {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f59e0b;
+    color: white;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase;
+    z-index: 1200;
 }
 /* Ocultar checkbox */
 .menu-toggle {
@@ -292,6 +301,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .card:hover {
