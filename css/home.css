@@ -316,6 +316,12 @@ body {
     color: #0a0909;
     text-align: center;
 }
+.heart-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2000;
+}
 
 .heart-container svg {
     width: 28px;
@@ -325,7 +331,6 @@ body {
     opacity: 1;
     visibility: visible;
 }
-
 .like-checkbox {
     position: absolute;
     opacity: 0;
@@ -340,7 +345,7 @@ body {
 .badge-oferta {
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 190px;
     background: #e0245e;
     color: #fff;
     padding: 4px 10px;
@@ -352,9 +357,8 @@ body {
 }
 .badge-stock {
     position: absolute;
-    top: 15
-    px;
-    right: 15px; 
+    top: 15px;
+    right: 135px; 
     background: #f59e0b;
     color: white;
     padding: 4px 10px;
