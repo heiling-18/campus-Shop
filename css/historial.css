@@ -1,231 +1,234 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { /* Reset global */
+    margin: 0; /* Quita márgenes por defecto */
+    padding: 0; /* Quita padding por defecto */
+    box-sizing: border-box; /* Incluye borde y padding en el tamaño total */
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #eef2ff, #f3f4f6);
+body { /* Estilos generales del body */
+    font-family: 'Inter', sans-serif; /* Fuente principal */
+    background: linear-gradient(135deg, #eef2ff, #f3f4f6); /* Fondo con degradado suave */
 }
 
 /* HEADER */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: linear-gradient(135deg,#4B0082,#4B0082);
-    color: white;
-    position: relative;
-    z-index: 1500;
+.header { /* Barra superior principal */
+    display: flex; /* Alinea elementos en fila */
+    justify-content: space-between; /* Espacio entre logo y nav */
+    align-items: center; /* Centra verticalmente */
+    padding: 15px 20px; /* Espaciado interno */
+    background: linear-gradient(135deg,#4B0082,#4B0082); /* Fondo morado (degradado plano) */
+    color: white; /* Texto blanco */
+    position: relative; /* Referencia para elementos posicionados dentro */
+    z-index: 1500; /* Encima de otros elementos */
 }
 
 /* LOGO */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo { /* Contenedor del logo */
+    display: flex; /* Alinea imagen y texto en fila */
+    align-items: center; /* Centra verticalmente */
+    gap: 10px; /* Espacio entre imagen y texto */
 }
 
-.logo img {
-    width: 42px;
-    height: 42px;
-    border-radius: 8px;
+.logo img { /* Imagen del logo */
+    width: 42px; /* Ancho */
+    height: 42px; /* Alto */
+    border-radius: 8px; /* Bordes redondeados */
 }
 
-.campus-shop {
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
+.campus-shop { /* Texto del nombre de la tienda */
+    font-size: 22px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: #fff; /* Blanco */
 }
 
 /* MENU BUTTON */
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
+.menu-btn { /* Botón del menú (hamburguesa) */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano */
 }
 
-.menu-btn svg {
-    color: white;
-    width: 26px;
+.menu-btn svg { /* Icono del botón de menú */
+    color: white; /* Blanco */
+    width: 26px; /* Ancho */
 }
 
 /* NAV */
-.nav {
-    display: flex;
-    gap: 12px;
+.nav { /* Contenedor de iconos/botones de navegación */
+    display: flex; /* Alineación horizontal */
+    gap: 12px; /* Espacio entre elementos */
 }
 
-.cart svg {
-    color: white;
-    transition: 0.3s;
+.cart svg { /* Icono del carrito */
+    color: white; /* Blanco */
+    transition: 0.3s; /* Animación suave */
 }
 
-.cart:hover svg {
-    color: #a5b4fc;
-    transform: scale(1.2);
+.cart:hover svg { /* Hover del carrito */
+    color: #a5b4fc; /* Lila claro */
+    transform: scale(1.2); /* Aumenta tamaño */
 }
 
 /* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 60px;
-    left: -250px; 
-    width: 250px;
-    height: 100%;
-    background: #44a7d8;
-    border-right: 1px solid #e0e0e0;
-    padding: 20px;
-    transition: left 0.3s ease;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-    z-index: 1000;
+.sidebar { /* Menú lateral */
+    position: fixed; /* Fijo en pantalla */
+    top: 60px; /* Debajo del header */
+    left: -250px; /* Oculto hacia la izquierda */
+    width: 250px; /* Ancho del sidebar */
+    height: 100%; /* Alto completo */
+    background: #44a7d8; /* Fondo azul */
+    border-right: 1px solid #e0e0e0; /* Línea derecha */
+    padding: 20px; /* Espaciado interno */
+    transition: left 0.3s ease; /* Animación al entrar/salir */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1); /* Sombra lateral */
+    z-index: 1000; /* Por encima del contenido */
 }
 
-.menu-toggle:checked ~ .sidebar {
-    left: 0;
+.menu-toggle:checked ~ .sidebar { /* Cuando el checkbox está marcado */
+    left: 0; /* Muestra el sidebar */
 }
 
-.sidebar ul {
-    list-style: none;
-    margin-top: 40px;
-    padding: 0;
+.sidebar ul { /* Lista del menú lateral */
+    list-style: none; /* Sin viñetas */
+    margin-top: 40px; /* Separación superior */
+    padding: 0; /* Sin padding */
 }
 
-.sidebar li {
-    margin-bottom: 18px;
+.sidebar li { /* Elemento de la lista del menú */
+    margin-bottom: 18px; /* Espaciado inferior */
 }
 
-.sidebar a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color:#F3F4F6    ;
-    font-size: 16px;
-    transition: 0.2s ease;
+.sidebar a { /* Enlaces del sidebar */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espacio entre icono y texto */
+    text-decoration: none; /* Sin subrayado */
+    color:#F3F4F6; /* Blanco/gris muy claro */
+    font-size: 16px; /* Tamaño de texto */
+    transition: 0.2s ease; /* Animación suave */
 }
 
-.sidebar a:hover {
-    color:#4B0082;
+.sidebar a:hover { /* Hover de enlaces del sidebar */
+    color:#4B0082; /* Morado */
 }
 
-.sidebar a svg {
-    width: 22px;
-    height: 22px;
-    color: #F3F4F6;
-    transition: 0.2s ease;
+.sidebar a svg { /* Iconos dentro del sidebar */
+    width: 22px; /* Ancho */
+    height: 22px; /* Alto */
+    color: #F3F4F6; /* Blanco/gris claro */
+    transition: 0.2s ease; /* Animación */
 }
 
-.sidebar a:hover svg {
-    color: #4B0082;
-}
-.menu-toggle {
-    display: none;
-}
-.header {
-    position: relative;
-    z-index: 1500;
+.sidebar a:hover svg { /* Hover de iconos del sidebar */
+    color: #4B0082; /* Morado */
 }
 
-.menu-btn {
-    position: relative;
-    z-index: 2000; 
-    cursor: pointer;
+.menu-toggle { /* Checkbox que controla el sidebar */
+    display: none; /* Oculto */
 }
+
+.header { /* Refuerzo de posición del header */
+    position: relative; /* Referencia para z-index */
+    z-index: 1500; /* Encima del sidebar */
+}
+
+.menu-btn { /* Botón del menú con prioridad visual */
+    position: relative; /* Posicionamiento */
+    z-index: 2000; /* Encima del sidebar */
+    cursor: pointer; /* Cursor de mano */
+}
+
 .nav a:hover svg,
 .menu-btn:hover svg,
-.search-btn:hover svg {
-    color:#7fc6e2;
-    transition: 0.2s ease;
-    transform: scale(1.15);
+.search-btn:hover svg { /* Hover general de iconos en nav/menú/buscador */
+    color:#7fc6e2; /* Azul claro */
+    transition: 0.2s ease; /* Animación */
+    transform: scale(1.15); /* Aumenta tamaño */
 }
 
 /* HISTORIAL */
-.historial-container {
-    padding: 30px;
+.historial-container { /* Contenedor principal del historial */
+    padding: 30px; /* Espaciado interno */
 }
 
-.titulo {
-    font-size: 26px;
-    font-weight: bold;
-    color:#4B0082;
-    margin-bottom: 25px;
+.titulo { /* Título de la sección de historial */
+    font-size: 26px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color:#4B0082; /* Morado */
+    margin-bottom: 25px; /* Espaciado inferior */
 }
 
 /* TARJETAS */
-.pedido {
-    background: white;
-    padding: 18px;
-    border-radius: 14px;
-    margin-bottom: 18px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    border-left: 6px solid #4B0082;
+.pedido { /* Tarjeta de pedido */
+    background: white; /* Fondo blanco */
+    padding: 18px; /* Espaciado interno */
+    border-radius: 14px; /* Bordes redondeados */
+    margin-bottom: 18px; /* Espaciado inferior */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08); /* Sombra suave */
+    transition: 0.3s; /* Animación */
+    border-left: 6px solid #4B0082; /* Borde lateral morado */
 }
 
-.pedido:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+.pedido:hover { /* Hover de la tarjeta de pedido */
+    transform: translateY(-4px); /* Se eleva ligeramente */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12); /* Sombra más marcada */
 }
 
-.pedido h3 {
-    font-size: 18px;
-    color: #1e293b;
+.pedido h3 { /* Título del pedido */
+    font-size: 18px; /* Tamaño */
+    color: #1e293b; /* Azul grisáceo oscuro */
 }
 
-.precio {
-    font-size: 17px;
-    font-weight: bold;
-    color:#4B0082;
-    margin: 5px 0;
+.precio { /* Precio del pedido */
+    font-size: 17px; /* Tamaño */
+    font-weight: bold; /* Negrita */
+    color:#4B0082; /* Morado */
+    margin: 5px 0; /* Espaciado vertical */
 }
 
-.fecha {
-    font-size: 14px;
-    color: #64748b;
+.fecha { /* Fecha del pedido */
+    font-size: 14px; /* Tamaño */
+    color: #64748b; /* Gris azulado */
 }
 
 /* ESTADOS */
-.estado {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
+.estado { /* Badge de estado del pedido */
+    display: inline-block; /* Elemento en línea tipo bloque */
+    margin-top: 10px; /* Espaciado superior */
+    padding: 4px 10px; /* Espaciado interno */
+    border-radius: 20px; /* Forma de píldora */
+    font-size: 13px; /* Tamaño */
+    font-weight: bold; /* Negrita */
 }
 
-.entregado {
-    background: #dcfce7;
-    color: #16a34a;
+.entregado { /* Estado entregado */
+    background: #dcfce7; /* Verde muy claro */
+    color: #16a34a; /* Verde */
 }
 
-.camino {
-    background: #fef9c3;
-    color: #ca8a04;
+.camino { /* Estado en camino */
+    background: #fef9c3; /* Amarillo muy claro */
+    color: #ca8a04; /* Amarillo oscuro */
 }
 
-.cancelado {
-    background: #fee2e2;
-    color: #dc2626;
+.cancelado { /* Estado cancelado */
+    background: #fee2e2; /* Rojo muy claro */
+    color: #dc2626; /* Rojo */
 }
 
 /* BOTON */
-.detalle {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: white;
-    background: #2563eb;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: 0.3s;
+.detalle { /* Botón para ver detalles del pedido */
+    display: inline-block; /* Elemento en línea tipo bloque */
+    margin-top: 10px; /* Espaciado superior */
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Texto blanco */
+    background: #2563eb; /* Azul intenso */
+    padding: 6px 12px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    transition: 0.3s; /* Animación */
 }
 
-.detalle:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+.detalle:hover { /* Hover del botón de detalles */
+    transform: scale(1.05); /* Aumenta tamaño ligeramente */
+    opacity: 0.9; /* Un poco más transparente */
 }
