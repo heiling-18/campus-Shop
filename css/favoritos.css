@@ -1,0 +1,559 @@
+* { /* Reset global */
+    margin: 0; /* Quita márgenes */
+    padding: 0; /* Quita padding */
+    box-sizing: border-box; /* Incluye borde y padding en el tamaño total */
+}
+body { /* Estilos generales del body */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente base */
+    background: #F3F4F6; /* Fondo gris claro */
+    font-family: "Inter", sans-serif; /* Sobrescribe la fuente a Inter */
+    background: #F5F5F7; /* Sobrescribe el fondo a gris más claro */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+}
+.header { /* Barra superior */
+    width: 100%; /* Ocupa todo el ancho */
+    display: flex; /* Alineación horizontal */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrado vertical */
+    padding: 12px 18px; /* Espaciado interno */
+    background: #4B0082; /* Fondo morado */
+    border-bottom: 1px solid #e0e0e0; /* Línea inferior */
+}
+
+.menu-toggle { /* Checkbox del menú lateral */
+    display: none; /* Oculto */
+}
+.header { /* Header sobre otros elementos */
+    position: relative; /* Posicionamiento */
+    z-index: 1500; /* Prioridad */
+}
+
+.menu-btn { /* Botón del menú */
+    position: relative; /* Posicionamiento */
+    z-index: 2000; /* Encima del sidebar */
+    cursor: pointer; /* Cursor de mano */
+}
+/* Menu Button */
+.menu-btn { /* Botón sin estilos nativos */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor clickeable */
+    padding: 6px; /* Área clickeable */
+}
+
+.menu-btn svg { /* Icono del menú */
+    width: 26px; /* Tamaño */
+    height: 26px; /* Tamaño */
+    color: #F3F4F6; /* Blanco */
+}
+.cart svg { /* Icono del carrito */
+    color: #F3F4F6; /* Blanco */
+    transition: 0.2s ease; /* Animación suave */
+}
+
+/* Logo */
+.logo { /* Contenedor del logo */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espaciado */
+}
+
+.logo img { /* Imagen del logo */
+    width: 40px; /* Tamaño */
+    height: 40px; /* Tamaño */
+    border-radius: 6px; /* Bordes redondeados */
+}
+
+.campus-shop { /* Texto del logo */
+    font-size: 20px; /* Tamaño */
+    font-weight: bold; /* Negrita */
+    color: #F3F4F6; /* Blanco */
+    font-family: "Bebas Neue", cursive; /* Fuente decorativa */
+}
+
+/* Nav */
+.nav { /* Contenedor de navegación */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espaciado */
+}
+.nav .btn { /* Botones del nav */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 6px; /* Espaciado */
+    padding: 6px 10px; /* Espaciado interno */
+    background: transparent; /* Sin fondo */
+    border: 1px solid transparent; /* Sin borde visible */
+    color: #F3F4F6; /* Blanco */
+    font-size: 14px; /* Tamaño */
+    cursor: pointer; /* Cursor clickeable */
+    border-radius: 6px; /* Bordes redondeados */
+    transition: 0.2s ease; /* Animación */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.nav .btn svg { /* Iconos del nav */
+    color: #F3F4F6; /* Blanco */
+    transition: 0.2s ease; /* Animación */
+}
+.nav .btn:hover { /* Hover del botón */
+    color: #7fc6e2; /* Azul claro */
+}
+
+.nav .btn:hover svg { /* Hover del icono */
+    color: #7fc6e2; /* Azul claro */
+}
+.nav .btn:active { /* Estado activo */
+    background: rgba(75, 0, 130, 0.15); /* Fondo morado transparente */
+    border-color: #7fc6e2; /* Borde azul */
+    color: #7fc6e2; /* Texto azul */
+}
+
+.nav .btn:active svg { /* Icono activo */
+    color: #7fc6e2; /* Azul */
+}
+
+.nav a:hover svg,
+.menu-btn:hover svg,
+.search-btn:hover svg { /* Hover general de iconos */
+    color:#7fc6e2; /* Azul claro */
+    transition: 0.2s ease; /* Animación */
+    transform: scale(1.15); /* Aumenta tamaño */
+}
+
+/* Sidebar */
+.sidebar { /* Menú lateral */
+    position: fixed; /* Fijo */
+    top: 60px; /* Debajo del header */
+    left: -250px; /* Oculto */
+    width: 250px; /* Ancho */
+    height: 100%; /* Alto completo */
+    background: #44a7d8; /* Azul */
+    border-right: 1px solid #e0e0e0; /* Línea derecha */
+    padding: 20px; /* Espaciado */
+    transition: left 0.3s ease; /* Animación */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1); /* Sombra */
+    z-index: 1000; /* Prioridad */
+}
+
+.menu-toggle:checked ~ .sidebar { /* Cuando el checkbox está activo */
+    left: 0; /* Sidebar visible */
+}
+
+.sidebar ul { /* Lista del menú */
+    list-style: none; /* Sin viñetas */
+    margin-top: 40px; /* Separación superior */
+    padding: 0; /* Sin padding */
+}
+
+.sidebar li { /* Elementos del menú */
+    margin-bottom: 18px; /* Espaciado */
+}
+
+.sidebar a { /* Enlaces del menú */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espaciado */
+    text-decoration: none; /* Sin subrayado */
+    color:#F3F4F6; /* Blanco */
+    font-size: 16px; /* Tamaño texto */
+    transition: 0.2s ease; /* Animación */
+}
+
+.sidebar a:hover { /* Hover del menú */
+    color: #4B0082; /* Morado */
+}
+
+.sidebar a svg { /* Iconos del menú */
+    width: 22px; /* Tamaño */
+    height: 22px; /* Tamaño */
+    color: #F3F4F6; /* Blanco */
+    transition: 0.2s ease; /* Animación */
+}
+
+.sidebar a:hover svg { /* Hover del icono */
+    color: #4B0082; /* Morado */
+}
+body { /* Body redefinido */
+    font-family: Arial, sans-serif; /* Fuente */
+    margin: 0; /* Sin margen */
+    background: #f3f4f6; /* Fondo gris */
+}
+header { /* Header alterno */
+    background: white; /* Fondo blanco */
+    padding: 15px; /* Espaciado */
+    display: flex; /* Alineación horizontal */
+    justify-content: space-between; /* Separación */
+    align-items: center; /* Centrado */
+}
+/* Selector universal: afecta TODOS los elementos */
+* {
+    margin: 0; /* elimina márgenes externos por defecto del navegador */
+    padding: 0; /* elimina espacios internos por defecto */
+    box-sizing: border-box; /* hace que width/height incluyan padding y borde */
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* fuente principal (fallbacks incluidos) */
+    background: #F3F4F6; /* color de fondo inicial */
+    font-family: "Inter", sans-serif; /* sobrescribe la fuente anterior */
+    background: #F5F5F7; /* sobrescribe el fondo anterior */
+    margin: 0; /* elimina margen externo del body */
+    padding: 0; /* elimina relleno interno */
+}
+
+/* Header principal */
+.header {
+    width: 100%; /* ocupa todo el ancho de la pantalla */
+    display: flex; /* activa flexbox */
+    justify-content: space-between; /* separa elementos (izq-centro-der) */
+    align-items: center; /* alinea verticalmente al centro */
+    padding: 12px 18px; /* espacio interno (arriba/abajo - lados) */
+    background: #4B0082; /* color morado de fondo */
+    border-bottom: 1px solid #e0e0e0; /* línea inferior gris */
+}
+
+/* Contenedor principal del contenido */
+.contenido {
+    min-height: calc(100vh - 70px); /* altura mínima: pantalla completa menos header */
+    display: flex; /* activa flexbox */
+    flex-direction: column; /* organiza en columna */
+    justify-content: flex-start; /* contenido inicia arriba */
+    align-items: center; /* centra horizontalmente */
+    padding-top: 20px; /* espacio arriba */
+}
+
+/* Contenedor de perfil */
+.perfil-container {
+    margin-top: 40px; /* separación desde arriba */
+}
+
+/* Checkbox oculto (controla menú lateral) */
+.menu-toggle {
+    display: none; /* no se muestra */
+}
+
+/* Header con posición */
+.header {
+    position: relative; /* permite posicionar elementos dentro */
+    z-index: 1500; /* prioridad alta en capas */
+}
+
+/* Botón menú (hamburguesa) */
+.menu-btn {
+    position: relative; /* referencia para posicionamiento */
+    z-index: 2000; /* más arriba que el header */
+    cursor: pointer; /* cursor tipo mano */
+}
+
+/* Estilo visual del botón menú */
+.menu-btn {
+    background: none; /* sin fondo */
+    border: none; /* sin borde */
+    cursor: pointer; /* mano al pasar */
+    padding: 6px; /* espacio interno */
+}
+
+/* Icono SVG del botón menú */
+.menu-btn svg {
+    width: 26px; /* ancho del icono */
+    height: 26px; /* alto del icono */
+    color: #F3F4F6; /* color blanco/gris */
+}
+
+/* Icono del carrito */
+.cart svg {
+    color: #F3F4F6; /* color inicial */
+    transition: 0.2s ease; /* animación suave */
+}
+
+/* Contenedor del logo */
+.logo {
+    display: flex; /* flexbox */
+    align-items: center; /* centra vertical */
+    gap: 10px; /* espacio entre imagen y texto */
+}
+
+/* Imagen del logo */
+.logo img {
+    width: 40px; /* ancho */
+    height: 40px; /* alto */
+    border-radius: 6px; /* bordes redondeados */
+}
+
+/* Texto del logo */
+.campus-shop {
+    font-size: 20px; /* tamaño letra */
+    font-weight: bold; /* negrita */
+    color: #F3F4F6; /* color blanco */
+    font-family: "Bebas Neue", cursive; /* fuente personalizada */
+}
+
+/* Navegación (login + carrito) */
+.nav {
+    display: flex; /* flexbox */
+    align-items: center; /* centra vertical */
+    gap: 10px; /* espacio entre botones */
+}
+
+/* Botón dentro del nav */
+.nav .btn {
+    display: flex; /* flexbox */
+    align-items: center; /* centra contenido */
+    gap: 6px; /* espacio icono-texto */
+    padding: 6px 10px; /* espacio interno */
+    background: transparent; /* fondo transparente */
+    border: 1px solid transparent; /* borde invisible */
+    color: #F3F4F6; /* texto blanco */
+    font-size: 14px; /* tamaño texto */
+    cursor: pointer; /* cursor mano */
+    border-radius: 6px; /* bordes redondeados */
+    transition: 0.2s ease; /* animación */
+    text-decoration: none; /* quita subrayado */
+}
+
+/* Icono dentro del botón */
+.nav .btn svg {
+    color: #F3F4F6; /* color inicial */
+    transition: 0.2s ease; /* animación */
+}
+
+/* Hover botón */
+.nav .btn:hover {
+    color: #7fc6e2; /* cambia texto a azul */
+}
+
+/* Hover icono */
+.nav .btn:hover svg {
+    color: #7fc6e2; /* cambia icono */
+}
+
+/* Click botón */
+.nav .btn:active {
+    background: rgba(75, 0, 130, 0.15); /* fondo leve */
+    border-color: #7fc6e2; /* borde azul */
+    color: #7fc6e2; /* texto azul */
+}
+
+/* Icono activo */
+.nav .btn:active svg {
+    color: #7fc6e2;
+}
+
+/* Hover general de iconos */
+.nav a:hover svg,
+.menu-btn:hover svg,
+.search-btn:hover svg {
+    color:#7fc6e2; /* cambia color */
+    transition: 0.2s ease; /* animación */
+    transform: scale(1.15); /* agranda */
+}
+
+/* Sidebar (menú lateral) */
+.sidebar {
+    position: fixed; /* fijo en pantalla */
+    top: 60px; /* debajo del header */
+    left: -250px; /* oculto fuera de pantalla */
+    width: 250px; /* ancho */
+    height: 100%; /* alto completo */
+    background: #44a7d8; /* fondo azul */
+    border-right: 1px solid #e0e0e0; /* borde lateral */
+    padding: 20px; /* espacio interno */
+    transition: left 0.3s ease; /* animación al abrir */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1); /* sombra */
+    z-index: 1000; /* capa */
+}
+
+/* Mostrar sidebar al activar checkbox */
+.menu-toggle:checked ~ .sidebar {
+    left: 0; /* aparece en pantalla */
+}
+
+/* Lista del sidebar */
+.sidebar ul {
+    list-style: none; /* quita viñetas */
+    margin-top: 40px; /* espacio arriba */
+    padding: 0;
+}
+
+/* Items del menú */
+.sidebar li {
+    margin-bottom: 18px; /* separación */
+}
+
+/* Links del sidebar */
+.sidebar a {
+    display: flex; /* flexbox */
+    align-items: center; /* centra */
+    gap: 10px; /* espacio icono-texto */
+    text-decoration: none; /* sin subrayado */
+    color:#F3F4F6; /* blanco */
+    font-size: 16px; /* tamaño */
+    transition: 0.2s ease; /* animación */
+}
+
+/* Hover links */
+.sidebar a:hover {
+    color:#4B0082; /* morado */
+}
+
+/* Iconos sidebar */
+.sidebar a svg {
+    width: 22px;
+    height: 22px;
+    color: #F3F4F6;
+    transition: 0.2s ease;
+}
+
+/* Hover iconos */
+.sidebar a:hover svg {
+    color: #4B0082;
+}
+
+/* Contenedor carrito */
+.carrito {
+    max-width: 420px; /* ancho máximo */
+    margin: 20px auto; /* centrado */
+    padding: 20px; /* espacio interno */
+    background: #fff; /* fondo blanco */
+    border-radius: 14px; /* bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* sombra */
+    font-family: Inter, sans-serif; /* fuente */
+}
+
+/* Título carrito */
+.carrito h2 {
+    margin-bottom: 20px;
+    color: #4C1D95;
+}
+
+/* Item del carrito */
+.item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.heart-container svg { /* Icono del corazón */
+    width: 100px; /* Tamaño */
+    height: 28px; /* Tamaño */
+    color: #aaa; /* Gris */
+    display: block; /* Se comporta como bloque */
+    opacity: 1; /* Totalmente visible */
+    visibility: visible; /* Visible */
+}
+
+.like-checkbox { /* Checkbox invisible del corazón */
+    position: absolute; /* Posición absoluta */
+    opacity: 0; /* Invisible */
+    pointer-events: none; /* No clickeable */
+    width: 0; /* Sin tamaño */
+    height: 0; /* Sin tamaño */
+}
+
+.like-checkbox:checked + .heart-btn svg { /* Corazón activado */
+    color: #e0245e !important; /* Rojo */
+}
+.lado-derecho {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100px;
+}
+/* Imagen del producto */
+.item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Nombre producto */
+.info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Descripción */
+.info p {
+    margin: 2px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Controles cantidad */
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+/* Botones +/- */
+.btn {
+    background: #EDE9FE;
+    color: #5B21B6;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Precio */
+.precio {
+    margin-left: auto;
+    font-weight: bold;
+    color: #4C1D95;
+}
+
+/* Totales */
+.totales {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/* Línea de totales */
+.totales p {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+
+/* Total final */
+.total {
+    font-size: 17px;
+    font-weight: bold;
+    color: #4C1D95;
+}
+
+/* Hover botones cantidad */
+.cantidad .btn:hover {
+    background: #7fc6e2;
+    color: #4C1D95;
+    transition: 0.2s ease;
+}
+
+/* Botón pagar */
+.btn-pay {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #3B82F6;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 18px;
+    font-size: 14px;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Hover botón pagar */
+.btn-pay:hover {
+    background: #2563EB;
+}
