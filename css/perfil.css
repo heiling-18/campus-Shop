@@ -1,100 +1,121 @@
+/* RESET GENERAL: elimina márgenes y paddings por defecto del navegador */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* quita margen externo */
+    padding: 0; /* quita espacio interno */
+    box-sizing: border-box; /* hace que padding y border no aumenten el tamaño */
 }
+
+/* ESTILO GENERAL DEL CUERPO */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #F3F4F6;
-    font-family: "Inter", sans-serif;
-    background: #F5F5F7;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif; /* fuente base */
+    background: #F3F4F6; /* fondo inicial (luego se sobrescribe) */
+    font-family: "Inter", sans-serif; /* fuente principal (sobrescribe la anterior) */
+    background: #F5F5F7; /* fondo final de la página */
+    margin: 0; /* elimina márgenes */
+    padding: 0; /* elimina espacios internos */
 }
+
+/* ENCABEZADO PRINCIPAL */
 .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 18px;
-    background: #4B0082;
-    border-bottom: 1px solid #e0e0e0;
+    width: 100%; /* ocupa todo el ancho */
+    display: flex; /* usa flexbox */
+    justify-content: space-between; /* separa elementos a los lados */
+    align-items: center; /* centra verticalmente */
+    padding: 12px 18px; /* espacio interno */
+    background: #4B0082; /* color morado */
+    border-bottom: 1px solid #e0e0e0; /* línea inferior */
 }
+
+/* CONTENIDO GENERAL DE LA PÁGINA */
 .contenido {
-    min-height: calc(100vh - 70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-    padding-top: 20px; 
+    min-height: calc(100vh - 70px); /* altura mínima menos header */
+    display: flex; /* flexbox */
+    flex-direction: column; /* elementos en columna */
+    justify-content: flex-start; /* inicia desde arriba */
+    align-items: center; /* centra horizontalmente */
+    padding-top: 20px; /* espacio arriba */
 }
+
+/* CONTENEDOR DE PERFIL (AJUSTE GENERAL) */
 .perfil-container {
-    margin-top: 40px;
+    margin-top: 40px; /* separación superior */
 }
-/* Ocultar checkbox */
+
+/* OCULTA CHECKBOX DEL MENÚ HAMBURGUESA */
 .menu-toggle {
-    display: none;
+    display: none; /* lo oculta visualmente */
 }
+
+/* HEADER ENCIMA DE OTROS ELEMENTOS */
 .header {
-    position: relative;
-    z-index: 1500;
+    position: relative; /* permite posicionamiento interno */
+    z-index: 1500; /* prioridad en capas */
 }
 
+/* BOTÓN DE MENÚ (HAMBURGUESA) */
 .menu-btn {
-    position: relative;
-    z-index: 2000; 
-    cursor: pointer;
-}
-/* Menu Button */
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
+    position: relative; /* permite control de capas */
+    z-index: 2000; /* encima de todo */
+    cursor: pointer; /* cursor tipo mano */
 }
 
+/* ESTILO DEL BOTÓN MENÚ */
+.menu-btn {
+    background: none; /* sin fondo */
+    border: none; /* sin borde */
+    cursor: pointer; /* puntero */
+    padding: 6px; /* espacio interno */
+}
+
+/* ICONO DEL MENÚ */
 .menu-btn svg {
-    width: 26px;
-    height: 26px;
-    color: #F3F4F6;
+    width: 26px; /* ancho */
+    height: 26px; /* alto */
+    color: #F3F4F6; /* color claro */
 }
+
+/* ICONO DEL CARRITO */
 .cart svg {
-    color: #F3F4F6;
-    transition: 0.2s ease;
+    color: #F3F4F6; /* color blanco */
+    transition: 0.2s ease; /* animación suave */
 }
 
-/* Logo */
+/* LOGO DEL SITIO */
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* flexbox */
+    align-items: center; /* centra verticalmente */
+    gap: 10px; /* separación entre imagen y texto */
 }
 
+/* IMAGEN DEL LOGO */
 .logo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
+    width: 40px; /* tamaño */
+    height: 40px; /* tamaño */
+    border-radius: 6px; /* bordes redondeados */
 }
 
+/* NOMBRE DE LA MARCA */
 .campus-shop {
-    font-size: 20px;
-    font-weight: bold;
-    color: #F3F4F6;
-    font-family: "Bebas Neue", cursive;
+    font-size: 20px; /* tamaño del texto */
+    font-weight: bold; /* negrita */
+    color: #F3F4F6; /* color claro */
+    font-family: "Bebas Neue", cursive; /* fuente decorativa */
 }
 
-/* Nav */
+/* BARRA DE NAVEGACIÓN */
 .nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* flexbox */
+    align-items: center; /* centra vertical */
+    gap: 10px; /* espacio entre botones */
 }
+
+/* BOTONES DEL NAV */
 .nav .btn {
-    display: flex;
+    display: flex; /* flex */
     align-items: center;
     gap: 6px;
     padding: 6px 10px;
-    background: transparent;
+    background: transparent; /* sin fondo */
     border: 1px solid transparent;
     color: #F3F4F6;
     font-size: 14px;
@@ -104,17 +125,22 @@ body {
     text-decoration: none;
 }
 
+/* ICONOS DEL NAV */
 .nav .btn svg {
     color: #F3F4F6;
     transition: 0.2s ease;
 }
+
+/* HOVER BOTONES NAV */
 .nav .btn:hover {
-    color: #7fc6e2;
+    color: #7fc6e2; /* cambia color texto */
 }
 
 .nav .btn:hover svg {
-    color: #7fc6e2;
+    color: #7fc6e2; /* cambia icono */
 }
+
+/* CLICK BOTÓN NAV */
 .nav .btn:active {
     background: rgba(75, 0, 130, 0.15);
     border-color: #7fc6e2;
@@ -124,7 +150,8 @@ body {
 .nav .btn:active svg {
     color: #7fc6e2;
 }
-/* Search */
+
+/* BARRA DE BÚSQUEDA */
 .search {
     display: flex;
     justify-content: center;
@@ -133,6 +160,7 @@ body {
     border-bottom: 1px solid #cbd4d7;
 }
 
+/* INPUT DE BÚSQUEDA */
 .search input {
     width: 65%;
     padding: 10px;
@@ -141,6 +169,7 @@ body {
     outline: none;
 }
 
+/* BOTÓN DE BUSCAR */
 .search-btn {
     padding: 10px 14px;
     border: 1px solid #ccc;
@@ -150,11 +179,13 @@ body {
     cursor: pointer;
 }
 
+/* ICONO DE BÚSQUEDA */
 .search-btn svg {
     width: 20px;
     height: 20px;
 }
 
+/* EFECTO HOVER ICONOS GENERALES */
 .nav a:hover svg,
 .menu-btn:hover svg,
 .search-btn:hover svg {
@@ -163,11 +194,11 @@ body {
     transform: scale(1.15);
 }
 
-/* Sidebar */
+/* SIDEBAR (MENÚ LATERAL) */
 .sidebar {
-    position: fixed;
+    position: fixed; /* fijo en pantalla */
     top: 60px;
-    left: -250px; 
+    left: -250px; /* oculto inicialmente */
     width: 250px;
     height: 100%;
     background: #44a7d8;
@@ -178,34 +209,40 @@ body {
     z-index: 1000;
 }
 
+/* ABRE SIDEBAR CUANDO CHECKBOX ESTÁ ACTIVO */
 .menu-toggle:checked ~ .sidebar {
     left: 0;
 }
 
+/* LISTA DEL SIDEBAR */
 .sidebar ul {
     list-style: none;
     margin-top: 40px;
     padding: 0;
 }
 
+/* ELEMENTOS DEL SIDEBAR */
 .sidebar li {
     margin-bottom: 18px;
 }
 
+/* LINKS DEL SIDEBAR */
 .sidebar a {
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color:#F3F4F6    ;
+    color:#F3F4F6;
     font-size: 16px;
     transition: 0.2s ease;
 }
 
+/* HOVER LINKS SIDEBAR */
 .sidebar a:hover {
     color: #4B0082;
 }
 
+/* ICONOS SIDEBAR */
 .sidebar a svg {
     width: 22px;
     height: 22px;
@@ -213,18 +250,22 @@ body {
     transition: 0.2s ease;
 }
 
+/* HOVER ICONOS SIDEBAR */
 .sidebar a:hover svg {
     color: #4B0082;
 }
+
+/* VARIABLES CSS (COLORES REUTILIZABLES) */
 :root {
-    --color-primary: #1E3A8A;      
-    --color-secondary: #6A5ACD;    
-    --color-background: #F5F5F7;   
-    --color-surface: #FFFFFF;      
+    --color-primary: #1E3A8A;
+    --color-secondary: #6A5ACD;
+    --color-background: #F5F5F7;
+    --color-surface: #FFFFFF;
     --color-text: #333333;
     --color-text-light: #6A6A6A;
 }
 
+/* CONTENEDOR DEL PERFIL */
 .perfil-container {
     width: 350px;
     background: var(--color-surface);
@@ -235,6 +276,7 @@ body {
     margin-bottom: 25px;
 }
 
+/* FOTO DE PERFIL */
 .foto-perfil img {
     width: 110px;
     height: 110px;
@@ -243,28 +285,33 @@ body {
     border: 3px solid #6a5acd33;
 }
 
+/* TITULOS */
 h1 {
     font-size: 20px;
     margin-top: 10px;
     color: var(--color-primary);
 }
 
+/* SUBTITULOS */
 h2 {
     margin: 10px 0 5px;
     font-size: 22px;
     font-weight: 600;
 }
 
+/* USUARIO */
 .usuario {
     color: var(--color-text-light);
     margin-bottom: 8px;
 }
 
+/* INFORMACIÓN */
 .info {
     font-size: 14px;
     color: #777;
 }
 
+/* BOTÓN EDITAR PERFIL */
 .btn-editar {
     margin-top: 15px;
     padding: 10px 20px;
@@ -277,12 +324,14 @@ h2 {
     font-weight: 500;
 }
 
+/* HOVER BOTÓN EDITAR */
 .btn-editar:hover {
     background:#44a7d8;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(106, 90, 205, 0.3);
 }
 
+/* MENÚ DEL PERFIL */
 .perfil-menu {
     width: 350px;
     display: flex;
@@ -290,6 +339,7 @@ h2 {
     gap: 15px;
 }
 
+/* ITEMS DEL MENÚ */
 .item {
     background: #f4f4ff;
     padding: 14px;
@@ -299,29 +349,35 @@ h2 {
     font-size: 15px;
     display: flex;
     align-items: center;
-    gap: 12px; 
+    gap: 12px;
     transition: 0.25s;
 }
 
+/* ICONOS ITEMS */
 .item svg {
     width: 22px;
     height: 22px;
     color: var(--color-secondary);
 }
 
+/* HOVER ITEMS */
 .item:hover {
     background: #e4e4ff;
     transform: translateX(4px);
 }
+
+/* ÚLTIMO ITEM (GENERALMENTE SALIR) */
 .item:last-child {
     background: #ffecec;
     color: #d9534f;
 }
 
+/* ICONO ÚLTIMO ITEM */
 .item:last-child svg {
     color: #d9534f;
 }
 
+/* HOVER ÚLTIMO ITEM */
 .item:last-child:hover {
     background: #ffdada;
 }

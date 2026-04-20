@@ -1,78 +1,92 @@
+/* Estilo general del cuerpo de la página */
 body {
-    font-family: 'Inter', sans-serif;
-    background: #f4f4ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    font-family: 'Inter', sans-serif; /* Fuente principal de toda la página */
+    background: #f4f4ff; /* Color de fondo general (gris muy claro azulado) */
+    
+    display: flex; /* Activa flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes por defecto del navegador */
 }
 
+/* Contenedor principal del login */
 .login-container {
-    background: white;
-    padding: 35px;
-    width: 350px;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    text-align: center;
+    background: white; /* Fondo blanco del cuadro */
+    padding: 35px; /* Espacio interno */
+    width: 350px; /* Ancho fijo del formulario */
+    border-radius: 14px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Sombra suave */
+    text-align: center; /* Centra el texto dentro del contenedor */
 }
 
+/* Título del login */
 .login-container h2 {
-    margin-bottom: 20px;
-    color: #3a71e8;
-    font-weight: 600;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #3a71e8; /* Color azul del título */
+    font-weight: 600; /* Grosor de la letra */
 }
 
+/* Contenedor de todo el formulario */
 .login-form .input-group {
-    text-align: left;
-    margin-bottom: 18px;
+    text-align: left; /* Alinea texto a la izquierda */
+    margin-bottom: 18px; /* Espacio entre campos */
 }
 
+/* Etiquetas (labels) de los inputs */
 .input-group label {
-    font-size: 14px;
-    color: #333;
+    font-size: 14px; /* Tamaño de letra pequeño */
+    color: #333; /* Color gris oscuro */
 }
 
+/* Campos de entrada (inputs) */
 .input-group input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-    outline: none;
-    transition: 0.2s;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espacio interno */
+    margin-top: 6px; /* Separación del label */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 15px; /* Tamaño de texto */
+    outline: none; /* Quita borde azul por defecto */
+    transition: 0.2s; /* Animación suave al enfocar */
 }
 
+/* Efecto cuando el input está seleccionado */
 .input-group input:focus {
-    border-color: #1740b9;
-    box-shadow: 0 0 4px rgba(106, 91, 255, 0.4);
+    border-color: #1740b9; /* Cambia el color del borde */
+    box-shadow: 0 0 4px rgba(106, 91, 255, 0.4); /* Sombra azul suave */
 }
 
+/* Botón de iniciar sesión */
 .btn-login {
-    display: block;
-    text-align: center;
-    width: 100%;
-    padding: 12px;
-    background: #1740b9;
-    color: white;
-    border-radius: 8px;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.2s;
+    display: block; /* Se comporta como bloque */
+    text-align: center; /* Centra texto */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 12px; /* Espacio interno */
+    background: #1740b9; /* Color azul del botón */
+    color: white; /* Texto blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de texto */
+    text-decoration: none; /* Quita subrayado */
+    cursor: pointer; /* Cursor tipo mano */
+    transition: 0.2s; /* Animación suave */
 }
 
+/* Efecto hover del botón */
 .btn-login:hover {
-    background: #5848e5;
-}
-.register-text {
-    margin-top: 15px;
-    font-size: 14px;
+    background: #5848e5; /* Cambia a azul más claro */
 }
 
+/* Texto de registro debajo del login */
+.register-text {
+    margin-top: 15px; /* Espacio superior */
+    font-size: 14px; /* Tamaño de letra pequeño */
+}
+
+/* Link de registro */
 .register-text a {
-    color:  #1740b9;
-    text-decoration: none;
-    font-weight: 500;
+    color:  #1740b9; /* Color azul del enlace */
+    text-decoration: none; /* Quita subrayado */
+    font-weight: 500; /* Grosor medio */
 }

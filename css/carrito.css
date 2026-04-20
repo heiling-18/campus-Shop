@@ -1,180 +1,216 @@
+/* Selector universal: afecta TODOS los elementos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* elimina márgenes externos por defecto del navegador */
+    padding: 0; /* elimina espacios internos por defecto */
+    box-sizing: border-box; /* hace que width/height incluyan padding y borde */
 }
+
+/* Estilos generales del cuerpo de la página */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #F3F4F6;
-    font-family: "Inter", sans-serif;
-    background: #F5F5F7;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif; /* fuente principal (fallbacks incluidos) */
+    background: #F3F4F6; /* color de fondo inicial */
+    font-family: "Inter", sans-serif; /* sobrescribe la fuente anterior */
+    background: #F5F5F7; /* sobrescribe el fondo anterior */
+    margin: 0; /* elimina margen externo del body */
+    padding: 0; /* elimina relleno interno */
 }
+
+/* Header principal */
 .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 18px;
-    background: #4B0082;
-    border-bottom: 1px solid #e0e0e0;
+    width: 100%; /* ocupa todo el ancho de la pantalla */
+    display: flex; /* activa flexbox */
+    justify-content: space-between; /* separa elementos (izq-centro-der) */
+    align-items: center; /* alinea verticalmente al centro */
+    padding: 12px 18px; /* espacio interno (arriba/abajo - lados) */
+    background: #4B0082; /* color morado de fondo */
+    border-bottom: 1px solid #e0e0e0; /* línea inferior gris */
 }
+
+/* Contenedor principal del contenido */
 .contenido {
-    min-height: calc(100vh - 70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-    padding-top: 20px; 
+    min-height: calc(100vh - 70px); /* altura mínima: pantalla completa menos header */
+    display: flex; /* activa flexbox */
+    flex-direction: column; /* organiza en columna */
+    justify-content: flex-start; /* contenido inicia arriba */
+    align-items: center; /* centra horizontalmente */
+    padding-top: 20px; /* espacio arriba */
 }
+
+/* Contenedor de perfil */
 .perfil-container {
-    margin-top: 40px;
+    margin-top: 40px; /* separación desde arriba */
 }
-/* Ocultar checkbox */
+
+/* Checkbox oculto (controla menú lateral) */
 .menu-toggle {
-    display: none;
+    display: none; /* no se muestra */
 }
+
+/* Header con posición */
 .header {
-    position: relative;
-    z-index: 1500;
+    position: relative; /* permite posicionar elementos dentro */
+    z-index: 1500; /* prioridad alta en capas */
 }
 
+/* Botón menú (hamburguesa) */
 .menu-btn {
-    position: relative;
-    z-index: 2000; 
-    cursor: pointer;
-}
-/* Menu Button */
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
+    position: relative; /* referencia para posicionamiento */
+    z-index: 2000; /* más arriba que el header */
+    cursor: pointer; /* cursor tipo mano */
 }
 
+/* Estilo visual del botón menú */
+.menu-btn {
+    background: none; /* sin fondo */
+    border: none; /* sin borde */
+    cursor: pointer; /* mano al pasar */
+    padding: 6px; /* espacio interno */
+}
+
+/* Icono SVG del botón menú */
 .menu-btn svg {
-    width: 26px;
-    height: 26px;
-    color: #F3F4F6;
+    width: 26px; /* ancho del icono */
+    height: 26px; /* alto del icono */
+    color: #F3F4F6; /* color blanco/gris */
 }
+
+/* Icono del carrito */
 .cart svg {
-    color: #F3F4F6;
-    transition: 0.2s ease;
+    color: #F3F4F6; /* color inicial */
+    transition: 0.2s ease; /* animación suave */
 }
 
-/* Logo */
+/* Contenedor del logo */
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* flexbox */
+    align-items: center; /* centra vertical */
+    gap: 10px; /* espacio entre imagen y texto */
 }
 
+/* Imagen del logo */
 .logo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
+    width: 40px; /* ancho */
+    height: 40px; /* alto */
+    border-radius: 6px; /* bordes redondeados */
 }
 
+/* Texto del logo */
 .campus-shop {
-    font-size: 20px;
-    font-weight: bold;
-    color: #F3F4F6;
-    font-family: "Bebas Neue", cursive;
+    font-size: 20px; /* tamaño letra */
+    font-weight: bold; /* negrita */
+    color: #F3F4F6; /* color blanco */
+    font-family: "Bebas Neue", cursive; /* fuente personalizada */
 }
 
-/* Nav */
+/* Navegación (login + carrito) */
 .nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* flexbox */
+    align-items: center; /* centra vertical */
+    gap: 10px; /* espacio entre botones */
 }
+
+/* Botón dentro del nav */
 .nav .btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
-    background: transparent;
-    border: 1px solid transparent;
-    color: #F3F4F6;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.2s ease;
-    text-decoration: none;
+    display: flex; /* flexbox */
+    align-items: center; /* centra contenido */
+    gap: 6px; /* espacio icono-texto */
+    padding: 6px 10px; /* espacio interno */
+    background: transparent; /* fondo transparente */
+    border: 1px solid transparent; /* borde invisible */
+    color: #F3F4F6; /* texto blanco */
+    font-size: 14px; /* tamaño texto */
+    cursor: pointer; /* cursor mano */
+    border-radius: 6px; /* bordes redondeados */
+    transition: 0.2s ease; /* animación */
+    text-decoration: none; /* quita subrayado */
 }
 
+/* Icono dentro del botón */
 .nav .btn svg {
-    color: #F3F4F6;
-    transition: 0.2s ease;
+    color: #F3F4F6; /* color inicial */
+    transition: 0.2s ease; /* animación */
 }
+
+/* Hover botón */
 .nav .btn:hover {
-    color: #7fc6e2;
+    color: #7fc6e2; /* cambia texto a azul */
 }
 
+/* Hover icono */
 .nav .btn:hover svg {
-    color: #7fc6e2;
-}
-.nav .btn:active {
-    background: rgba(75, 0, 130, 0.15);
-    border-color: #7fc6e2;
-    color: #7fc6e2;
+    color: #7fc6e2; /* cambia icono */
 }
 
+/* Click botón */
+.nav .btn:active {
+    background: rgba(75, 0, 130, 0.15); /* fondo leve */
+    border-color: #7fc6e2; /* borde azul */
+    color: #7fc6e2; /* texto azul */
+}
+
+/* Icono activo */
 .nav .btn:active svg {
     color: #7fc6e2;
 }
+
+/* Hover general de iconos */
 .nav a:hover svg,
 .menu-btn:hover svg,
 .search-btn:hover svg {
-    color:#7fc6e2;
-    transition: 0.2s ease;
-    transform: scale(1.15);
+    color:#7fc6e2; /* cambia color */
+    transition: 0.2s ease; /* animación */
+    transform: scale(1.15); /* agranda */
 }
 
-/* Sidebar */
+/* Sidebar (menú lateral) */
 .sidebar {
-    position: fixed;
-    top: 60px;
-    left: -250px; 
-    width: 250px;
-    height: 100%;
-    background: #44a7d8;
-    border-right: 1px solid #e0e0e0;
-    padding: 20px;
-    transition: left 0.3s ease;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-    z-index: 1000;
+    position: fixed; /* fijo en pantalla */
+    top: 60px; /* debajo del header */
+    left: -250px; /* oculto fuera de pantalla */
+    width: 250px; /* ancho */
+    height: 100%; /* alto completo */
+    background: #44a7d8; /* fondo azul */
+    border-right: 1px solid #e0e0e0; /* borde lateral */
+    padding: 20px; /* espacio interno */
+    transition: left 0.3s ease; /* animación al abrir */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1); /* sombra */
+    z-index: 1000; /* capa */
 }
 
+/* Mostrar sidebar al activar checkbox */
 .menu-toggle:checked ~ .sidebar {
-    left: 0;
+    left: 0; /* aparece en pantalla */
 }
 
+/* Lista del sidebar */
 .sidebar ul {
-    list-style: none;
-    margin-top: 40px;
+    list-style: none; /* quita viñetas */
+    margin-top: 40px; /* espacio arriba */
     padding: 0;
 }
 
+/* Items del menú */
 .sidebar li {
-    margin-bottom: 18px;
+    margin-bottom: 18px; /* separación */
 }
 
+/* Links del sidebar */
 .sidebar a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color:#F3F4F6    ;
-    font-size: 16px;
-    transition: 0.2s ease;
+    display: flex; /* flexbox */
+    align-items: center; /* centra */
+    gap: 10px; /* espacio icono-texto */
+    text-decoration: none; /* sin subrayado */
+    color:#F3F4F6; /* blanco */
+    font-size: 16px; /* tamaño */
+    transition: 0.2s ease; /* animación */
 }
 
+/* Hover links */
 .sidebar a:hover {
-    color:#4B0082;
+    color:#4B0082; /* morado */
 }
 
+/* Iconos sidebar */
 .sidebar a svg {
     width: 22px;
     height: 22px;
@@ -182,25 +218,29 @@ body {
     transition: 0.2s ease;
 }
 
+/* Hover iconos */
 .sidebar a:hover svg {
     color: #4B0082;
 }
-/* Carrito */
+
+/* Contenedor carrito */
 .carrito {
-    max-width: 420px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    font-family: Inter, sans-serif;
+    max-width: 420px; /* ancho máximo */
+    margin: 20px auto; /* centrado */
+    padding: 20px; /* espacio interno */
+    background: #fff; /* fondo blanco */
+    border-radius: 14px; /* bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* sombra */
+    font-family: Inter, sans-serif; /* fuente */
 }
 
+/* Título carrito */
 .carrito h2 {
     margin-bottom: 20px;
     color: #4C1D95;
 }
 
+/* Item del carrito */
 .item {
     display: flex;
     align-items: center;
@@ -210,6 +250,7 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
+/* Imagen del producto */
 .item img {
     width: 60px;
     height: 60px;
@@ -217,17 +258,20 @@ body {
     object-fit: cover;
 }
 
+/* Nombre producto */
 .info h3 {
     margin: 0;
     font-size: 16px;
 }
 
+/* Descripción */
 .info p {
     margin: 2px 0;
     font-size: 13px;
     color: #666;
 }
 
+/* Controles cantidad */
 .cantidad {
     display: flex;
     align-items: center;
@@ -235,6 +279,7 @@ body {
     margin-top: 6px;
 }
 
+/* Botones +/- */
 .btn {
     background: #EDE9FE;
     color: #5B21B6;
@@ -243,33 +288,41 @@ body {
     font-weight: bold;
 }
 
+/* Precio */
 .precio {
     margin-left: auto;
     font-weight: bold;
     color: #4C1D95;
 }
 
+/* Totales */
 .totales {
     margin-top: 20px;
     font-size: 15px;
 }
 
+/* Línea de totales */
 .totales p {
     display: flex;
     justify-content: space-between;
     margin: 6px 0;
 }
 
+/* Total final */
 .total {
     font-size: 17px;
     font-weight: bold;
     color: #4C1D95;
 }
+
+/* Hover botones cantidad */
 .cantidad .btn:hover {
     background: #7fc6e2;
     color: #4C1D95;
     transition: 0.2s ease;
 }
+
+/* Botón pagar */
 .btn-pay {
     display: block;
     width: 100%;
@@ -285,6 +338,7 @@ body {
     transition: 0.2s;
 }
 
+/* Hover botón pagar */
 .btn-pay:hover {
     background: #2563EB;
 }

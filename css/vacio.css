@@ -1,198 +1,238 @@
+/* Contenedor cuando el carrito está vacío */
 .carrito-vacio {
-    text-align: center;
-    padding: 200px 20px;
-    color: #4B5563;
+    text-align: center; /* centra todo el texto horizontalmente */
+    padding: 200px 20px; /* espacio interno grande arriba/abajo y pequeño a los lados */
+    color: #4B5563; /* color gris del texto */
 }
 
+/* Icono del carrito vacío */
 .icono-carrito svg {
-    color: #4C1D95;
-    opacity: 0.9;
-    margin-bottom: 25px;
+    color: #4C1D95; /* color morado del icono */
+    opacity: 0.9; /* leve transparencia */
+    margin-bottom: 25px; /* espacio debajo del icono */
 }
 
+/* Título del carrito vacío */
 .carrito-vacio h2 {
-    font-size: 1.8rem;
-    color: #4C1D95;
-    margin-bottom: 10px;
+    font-size: 1.8rem; /* tamaño de letra grande */
+    color: #4C1D95; /* color morado */
+    margin-bottom: 10px; /* espacio debajo */
 }
 
+/* Texto descriptivo */
 .carrito-vacio p {
-    font-size: 1rem;
-    color: #6B7280;
+    font-size: 1rem; /* tamaño normal */
+    color: #6B7280; /* gris más claro */
 }
 
+/* Botón para volver */
 .btn-volver {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 24px;
-    background: #3B82F6; 
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.2s ease;
+    display: inline-block; /* permite padding y margen como bloque pero en línea */
+    margin-top: 25px; /* separación arriba */
+    padding: 12px 24px; /* espacio interno */
+    background: #3B82F6; /* color azul */
+    color: white; /* texto blanco */
+    border-radius: 10px; /* bordes redondeados */
+    text-decoration: none; /* quita subrayado */
+    font-weight: 600; /* texto semi-negrita */
+    transition: 0.2s ease; /* animación suave */
 }
 
+/* Hover del botón */
 .btn-volver:hover {
-    background: #2563EB;
+    background: #2563EB; /* azul más oscuro al pasar el mouse */
 }
+
+/* Reset global */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* elimina márgenes por defecto */
+    padding: 0; /* elimina rellenos */
+    box-sizing: border-box; /* incluye padding y borde en tamaño total */
 }
+
+/* Estilos generales del body */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #F3F4F6;
-    font-family: "Inter", sans-serif;
-    background: #F5F5F7;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif; /* fuente base */
+    background: #F3F4F6; /* fondo inicial */
+    font-family: "Inter", sans-serif; /* sobrescribe la fuente */
+    background: #F5F5F7; /* sobrescribe el fondo */
+    margin: 0; /* elimina margen */
+    padding: 0; /* elimina padding */
 }
+
+/* Header */
 .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 18px;
-    background: #4B0082;
-    border-bottom: 1px solid #e0e0e0;
+    width: 100%; /* ocupa todo el ancho */
+    display: flex; /* activa flexbox */
+    justify-content: space-between; /* separa elementos */
+    align-items: center; /* centra verticalmente */
+    padding: 12px 18px; /* espacio interno */
+    background: #4B0082; /* fondo morado */
+    border-bottom: 1px solid #e0e0e0; /* línea inferior */
 }
+
+/* Contenedor general */
 .contenido {
-    min-height: calc(100vh - 70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-    padding-top: 20px; 
+    min-height: calc(100vh - 70px); /* altura mínima pantalla completa */
+    display: flex; /* flexbox */
+    flex-direction: column; /* en columna */
+    justify-content: flex-start; /* contenido arriba */
+    align-items: center; /* centrado horizontal */
+    padding-top: 20px; /* espacio arriba */
 }
+
+/* Contenedor perfil */
 .perfil-container {
-    margin-top: 40px;
+    margin-top: 40px; /* separación superior */
 }
-/* Ocultar checkbox */
+
+/* Checkbox oculto */
 .menu-toggle {
-    display: none;
+    display: none; /* no visible */
 }
+
+/* Header con capas */
 .header {
-    position: relative;
-    z-index: 1500;
+    position: relative; /* referencia para posicionamiento */
+    z-index: 1500; /* capa alta */
 }
 
+/* Botón menú */
 .menu-btn {
-    position: relative;
-    z-index: 2000; 
-    cursor: pointer;
-}
-/* Menu Button */
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
+    position: relative; /* referencia */
+    z-index: 2000; /* por encima del header */
+    cursor: pointer; /* cursor mano */
 }
 
+/* Estilo botón menú */
+.menu-btn {
+    background: none; /* sin fondo */
+    border: none; /* sin borde */
+    cursor: pointer; /* cursor mano */
+    padding: 6px; /* espacio interno */
+}
+
+/* Icono menú */
 .menu-btn svg {
-    width: 26px;
-    height: 26px;
-    color: #F3F4F6;
+    width: 26px; /* ancho */
+    height: 26px; /* alto */
+    color: #F3F4F6; /* color blanco */
 }
+
+/* Icono carrito */
 .cart svg {
-    color: #F3F4F6;
-    transition: 0.2s ease;
+    color: #F3F4F6; /* color inicial */
+    transition: 0.2s ease; /* animación */
 }
 
 /* Logo */
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* flexbox */
+    align-items: center; /* centra vertical */
+    gap: 10px; /* espacio entre elementos */
 }
 
+/* Imagen logo */
 .logo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
+    width: 40px; /* ancho */
+    height: 40px; /* alto */
+    border-radius: 6px; /* bordes redondeados */
 }
 
+/* Texto logo */
 .campus-shop {
-    font-size: 20px;
-    font-weight: bold;
-    color: #F3F4F6;
-    font-family: "Bebas Neue", cursive;
+    font-size: 20px; /* tamaño */
+    font-weight: bold; /* negrita */
+    color: #F3F4F6; /* blanco */
+    font-family: "Bebas Neue", cursive; /* fuente */
 }
 
-/* Nav */
+/* Navegación */
 .nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.nav .btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
-    background: transparent;
-    border: 1px solid transparent;
-    color: #F3F4F6;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.2s ease;
-    text-decoration: none;
+    display: flex; /* flexbox */
+    align-items: center; /* centra vertical */
+    gap: 10px; /* espacio */
 }
 
+/* Botones nav */
+.nav .btn {
+    display: flex; /* flexbox */
+    align-items: center; /* centra */
+    gap: 6px; /* espacio */
+    padding: 6px 10px; /* espacio interno */
+    background: transparent; /* sin fondo */
+    border: 1px solid transparent; /* borde invisible */
+    color: #F3F4F6; /* texto blanco */
+    font-size: 14px; /* tamaño */
+    cursor: pointer; /* mano */
+    border-radius: 6px; /* bordes */
+    transition: 0.2s ease; /* animación */
+    text-decoration: none; /* sin subrayado */
+}
+
+/* Iconos nav */
 .nav .btn svg {
     color: #F3F4F6;
     transition: 0.2s ease;
 }
+
+/* Hover botón */
 .nav .btn:hover {
     color: #7fc6e2;
 }
 
+/* Hover icono */
 .nav .btn:hover svg {
     color: #7fc6e2;
 }
+
+/* Click botón */
 .nav .btn:active {
     background: rgba(75, 0, 130, 0.15);
     border-color: #7fc6e2;
     color: #7fc6e2;
 }
 
+/* Icono activo */
 .nav .btn:active svg {
     color: #7fc6e2;
 }
-/* Search */
+
+/* Buscador */
 .search {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    background: #d7a4f4;
-    border-bottom: 1px solid #cbd4d7;
+    display: flex; /* flexbox */
+    justify-content: center; /* centra horizontal */
+    padding: 15px; /* espacio interno */
+    background: #d7a4f4; /* fondo */
+    border-bottom: 1px solid #cbd4d7; /* línea inferior */
 }
 
+/* Input buscador */
 .search input {
-    width: 65%;
-    padding: 10px;
-    border: 1px solid #3582a6;
-    border-radius: 6px 0 0 6px;
-    outline: none;
+    width: 65%; /* ancho relativo */
+    padding: 10px; /* espacio interno */
+    border: 1px solid #3582a6; /* borde */
+    border-radius: 6px 0 0 6px; /* bordes redondeados solo izquierda */
+    outline: none; /* elimina borde azul al hacer focus */
 }
 
+/* Botón buscador */
 .search-btn {
-    padding: 10px 14px;
-    border: 1px solid #ccc;
-    border-left: none;
-    background: #4B0082;
-    border-radius: 0 6px 6px 0;
-    cursor: pointer;
+    padding: 10px 14px; /* espacio interno */
+    border: 1px solid #ccc; /* borde */
+    border-left: none; /* elimina borde izquierdo */
+    background: #4B0082; /* fondo */
+    border-radius: 0 6px 6px 0; /* bordes derecha */
+    cursor: pointer; /* mano */
 }
 
+/* Icono buscador */
 .search-btn svg {
     width: 20px;
     height: 20px;
 }
 
+/* Hover general iconos */
 .nav a:hover svg,
 .menu-btn:hover svg,
 .search-btn:hover svg {
@@ -203,47 +243,53 @@ body {
 
 /* Sidebar */
 .sidebar {
-    position: fixed;
-    top: 60px;
-    left: -250px; 
-    width: 250px;
-    height: 100%;
-    background: #44a7d8;
-    border-right: 1px solid #e0e0e0;
-    padding: 20px;
-    transition: left 0.3s ease;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-    z-index: 1000;
+    position: fixed; /* fijo */
+    top: 60px; /* debajo header */
+    left: -250px; /* oculto */
+    width: 250px; /* ancho */
+    height: 100%; /* alto completo */
+    background: #44a7d8; /* fondo */
+    border-right: 1px solid #e0e0e0; /* borde */
+    padding: 20px; /* espacio */
+    transition: left 0.3s ease; /* animación */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1); /* sombra */
+    z-index: 1000; /* capa */
 }
 
+/* Mostrar sidebar */
 .menu-toggle:checked ~ .sidebar {
     left: 0;
 }
 
+/* Lista sidebar */
 .sidebar ul {
     list-style: none;
     margin-top: 40px;
     padding: 0;
 }
 
+/* Items */
 .sidebar li {
     margin-bottom: 18px;
 }
 
+/* Links */
 .sidebar a {
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color:#F3F4F6    ;
+    color:#F3F4F6;
     font-size: 16px;
     transition: 0.2s ease;
 }
 
+/* Hover links */
 .sidebar a:hover {
     color: #4B0082;
 }
 
+/* Iconos */
 .sidebar a svg {
     width: 22px;
     height: 22px;
@@ -251,6 +297,7 @@ body {
     transition: 0.2s ease;
 }
 
+/* Hover iconos */
 .sidebar a:hover svg {
     color: #4B0082;
 }

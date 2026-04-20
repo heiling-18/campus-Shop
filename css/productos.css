@@ -1,63 +1,73 @@
+/* ── RESET GENERAL ── */
+/* Quita márgenes y paddings por defecto y usa box-sizing consistente */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* ── ESTILO BASE DEL BODY ── */
+/* Define fuente general, fondo y estructura base de la página */
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background: #f5f5f5;
-    color: #1a1a1a;
-    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif; /* tipografía principal */
+    background: #f5f5f5; /* color de fondo general */
+    color: #1a1a1a; /* color de texto base */
+    min-height: 100vh; /* ocupa toda la altura de la pantalla */
 }
 
 /* ── HEADER ── */
+/* Barra superior fija con navegación */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 16px;
-    background: #fff;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
+    display: flex; /* organiza elementos en fila */
+    align-items: center; /* centra verticalmente */
+    justify-content: space-between; /* separa elementos extremos */
+    padding: 14px 16px; /* espacio interno */
+    background: #fff; /* fondo blanco */
+    border-bottom: 1px solid #e0e0e0; /* línea inferior sutil */
+    position: sticky; /* se queda fijo al hacer scroll */
     top: 0;
-    z-index: 100;
+    z-index: 100; /* se mantiene encima de otros elementos */
 }
 
+/* Botón de volver (flecha atrás) */
 .header-back {
     display: flex;
     align-items: center;
-    color:  #4B0082;
+    color: #4B0082; /* color principal */
     text-decoration: none;
     padding: 6px;
     border-radius: 50%;
-    transition: background .2s;
+    transition: background .2s; /* animación hover */
 }
 
+/* Hover del botón volver */
 .header-back:hover {
     background: #f0f0f0;
 }
 
+/* Título del header */
 .header-title {
     font-size: 17px;
     font-weight: 600;
 }
 
+/* Icono carrito en header */
 .header-cart {
     display: flex;
     align-items: center;
-    color:  #4B0082;
+    color: #4B0082;
     text-decoration: none;
     padding: 6px;
 }
 
-/* ── MAIN PRODUCT LAYOUT ── */
+/* ── CONTENEDOR PRINCIPAL DEL PRODUCTO ── */
+/* Estructura general del contenido */
 .product-main {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* en móvil se apila verticalmente */
 }
 
-/* ── IMAGEN PRINCIPAL ── */
+/* ── IMAGEN DEL PRODUCTO ── */
 .product-image-wrap {
     background: #fff;
     padding: 28px 16px;
@@ -67,26 +77,29 @@ body {
     min-height: 280px;
 }
 
+/* Imagen del producto */
 .product-image-wrap img {
     max-height: 260px;
     max-width: 100%;
-    object-fit: contain;
+    object-fit: contain; /* evita deformación */
     border-radius: 10px;
-    animation: fadeInImg .4s ease;
+    animation: fadeInImg .4s ease; /* animación entrada */
 }
 
+/* Animación de aparición de imagen */
 @keyframes fadeInImg {
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── BLOQUE DE INFORMACIÓN ── */
+/* ── BLOQUE DE INFORMACIÓN DEL PRODUCTO ── */
 .product-info {
     background: #fff;
     margin-top: 8px;
     padding: 20px 16px 28px;
 }
 
+/* Nombre del producto */
 .product-name {
     font-size: 22px;
     font-weight: 700;
@@ -94,6 +107,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Precio del producto */
 .product-price {
     font-size: 26px;
     font-weight: 800;
@@ -101,6 +115,7 @@ body {
     margin-bottom: 14px;
 }
 
+/* Descripción */
 .product-desc {
     font-size: 14px;
     color: #666;
@@ -108,7 +123,8 @@ body {
     margin-bottom: 24px;
 }
 
-/* ── ETIQUETA DE SECCIÓN ── */
+/* ── ETIQUETAS DE SECCIÓN ── */
+/* Títulos pequeños tipo "Tallas", etc */
 .section-label {
     font-size: 12px;
     font-weight: 700;
@@ -118,7 +134,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* ── TALLAS ── */
+/* ── BOTONES DE TALLA ── */
 .size-options {
     display: flex;
     gap: 10px;
@@ -126,6 +142,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* Botón individual de talla */
 .size-btn {
     width: 46px;
     height: 46px;
@@ -143,6 +160,7 @@ body {
     position: relative;
 }
 
+/* Input oculto dentro del botón */
 .size-btn input {
     position: absolute;
     opacity: 0;
@@ -151,14 +169,15 @@ body {
     cursor: pointer;
 }
 
+/* Estado hover o seleccionado */
 .size-btn:hover,
 .size-btn:has(input:checked) {
-    border-color:  #4B0082;
+    border-color: #4B0082;
     background: #4B0082;
     color: #fff;
 }
 
-/* ── BOTÓN AGREGAR AL CARRITO ── */
+/* ── BOTÓN PRINCIPAL ── */
 .add-to-cart {
     display: block;
     width: 100%;
@@ -170,17 +189,17 @@ body {
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    letter-spacing: .02em;
-    font-family: inherit;
     text-align: center;
     text-decoration: none;
     transition: background .2s, transform .1s;
 }
 
+/* Hover botón carrito */
 .add-to-cart:hover {
     background: #44a7d8;
 }
 
+/* Click efecto */
 .add-to-cart:active {
     transform: scale(.98);
 }
@@ -192,59 +211,63 @@ body {
     padding: 20px 16px 32px;
 }
 
+/* Título sección relacionados */
 .related-title {
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 16px;
 }
 
+/* Grid de productos */
 .related-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 }
 
+/* Tarjeta producto */
 .related-card {
     border-radius: 12px;
     overflow: hidden;
     background: #f5f5f5;
     text-decoration: none;
     color: inherit;
-    display: block;
     transition: transform .18s, box-shadow .18s;
 }
 
+/* Hover tarjeta */
 .related-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .10);
+    box-shadow: 0 6px 18px rgba(0,0,0,.10);
 }
 
+/* Imagen tarjeta */
 .related-card img {
     width: 100%;
-    height: 180px; 
+    height: 180px;
     object-fit: contain;
     background: #fff;
     padding: 10px;
 }
 
-
+/* Info tarjeta */
 .related-card-info {
     padding: 10px 12px 14px;
 }
 
+/* Nombre tarjeta */
 .related-card-name {
     font-size: 13px;
     font-weight: 600;
-    line-height: 1.3;
     margin-bottom: 5px;
-    color: #1a1a1a;
 }
 
+/* Precio tarjeta */
 .related-card-price {
     font-size: 14px;
     font-weight: 800;
-    color: #1a1a1a;
 }
+
 /* ── CANTIDAD ── */
 .qty-row {
     display: flex;
@@ -253,6 +276,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Botones + y - */
 .qty-btn {
     width: 38px;
     height: 38px;
@@ -263,121 +287,39 @@ body {
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.2s;
 }
 
+/* Hover botones cantidad */
 .qty-btn:hover {
-    background:#44a7d8;
+    background: #44a7d8;
 }
 
+/* Número cantidad */
 .qty-display {
     font-size: 18px;
     font-weight: 600;
     min-width: 20px;
     text-align: center;
 }
+
+/* SVG hover */
 .span svg:hover {
     fill: #44a7d8;
 }
-/* ── RESPONSIVO - TABLET ── */
+
+/* ── RESPONSIVE TABLET ── */
 @media (min-width: 600px) {
     .product-main {
         flex-direction: row;
         background: #fff;
-        margin-top: 0;
-        gap: 0;
-    }
-
-    .product-image-wrap {
-        flex: 1;
-        min-height: 400px;
-        padding: 40px 24px;
-        border-right: 1px solid #f0f0f0;
-    }
-
-    .product-image-wrap img {
-        max-height: 340px;
-    }
-
-    .product-info {
-        flex: 1;
-        margin-top: 0;
-        padding: 32px 28px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .related-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .related-card img {
-        height: 160px;
     }
 }
 
-/* ── RESPONSIVO - DESKTOP ── */
+/* ── RESPONSIVE DESKTOP ── */
 @media (min-width: 900px) {
     body {
         max-width: 1100px;
         margin: 0 auto;
         box-shadow: 0 0 40px rgba(0,0,0,.08);
-    }
-
-    .header {
-        padding: 16px 32px;
-    }
-
-    .product-main {
-        padding: 0;
-    }
-
-    .product-image-wrap {
-        flex: 1.2;
-        min-height: 480px;
-        padding: 48px 40px;
-    }
-
-    .product-image-wrap img {
-        max-height: 400px;
-    }
-
-    .product-info {
-        flex: 1;
-        padding: 48px 40px;
-    }
-
-    .product-name {
-        font-size: 28px;
-    }
-
-    .product-price {
-        font-size: 32px;
-    }
-
-    .product-desc {
-        font-size: 15px;
-    }
-
-    .related-section {
-        padding: 28px 32px 40px;
-    }
-
-    .related-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-    }
-
-    .related-card img {
-        height: 180px;
-    }
-
-    .related-card-name {
-        font-size: 14px;
-    }
-
-    .related-card-price {
-        font-size: 15px;
     }
 }
