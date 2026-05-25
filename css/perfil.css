@@ -1,327 +1,330 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { /* Reset global */
+    margin: 0; /* Quita márgenes */
+    padding: 0; /* Quita padding */
+    box-sizing: border-box; /* Incluye borde y padding en el tamaño total */
 }
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #F3F4F6;
-    font-family: "Inter", sans-serif;
-    background: #F5F5F7;
-    margin: 0;
-    padding: 0;
+body { /* Estilos generales del body */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente base */
+    background: #F3F4F6; /* Fondo gris claro */
+    font-family: "Inter", sans-serif; /* Sobrescribe la fuente */
+    background: #F5F5F7; /* Fondo gris claro suave */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
 }
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 18px;
-    background: #4B0082;
-    border-bottom: 1px solid #e0e0e0;
+.header { /* Barra superior */
+    width: 100%; /* Ocupa todo el ancho */
+    display: flex; /* Alineación horizontal */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrado vertical */
+    padding: 12px 18px; /* Espaciado interno */
+    background: #4B0082; /* Fondo morado */
+    border-bottom: 1px solid #e0e0e0; /* Línea inferior */
 }
-.contenido {
-    min-height: calc(100vh - 70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-    padding-top: 20px; 
+.contenido { /* Contenedor principal */
+    min-height: calc(100vh - 70px); /* Altura menos header */
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Columna */
+    justify-content: flex-start; /* Alinea arriba */
+    align-items: center; /* Centra horizontalmente */
+    padding-top: 20px; /* Espaciado superior */
 }
-.perfil-container {
-    margin-top: 40px;
+.perfil-container { /* Contenedor del perfil */
+    margin-top: 40px; /* Separación superior */
 }
 /* Ocultar checkbox */
-.menu-toggle {
-    display: none;
+.menu-toggle { /* Checkbox del menú lateral */
+    display: none; /* Oculto */
 }
-.header {
-    position: relative;
-    z-index: 1500;
+.header { /* Refuerzo de posición */
+    position: relative; /* Referencia para z-index */
+    z-index: 1500; /* Encima del sidebar */
 }
 
-.menu-btn {
-    position: relative;
-    z-index: 2000; 
-    cursor: pointer;
+.menu-btn { /* Botón del menú */
+    position: relative; /* Posicionamiento */
+    z-index: 2000; /* Encima del sidebar */
+    cursor: pointer; /* Cursor de mano */
 }
 /* Menu Button */
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
+.menu-btn { /* Botón sin estilos nativos */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor clickeable */
+    padding: 6px; /* Área clickeable */
 }
 
-.menu-btn svg {
-    width: 26px;
-    height: 26px;
-    color: #F3F4F6;
+.menu-btn svg { /* Icono del menú */
+    width: 26px; /* Tamaño */
+    height: 26px; /* Tamaño */
+    color: #F3F4F6; /* Blanco */
 }
-.cart svg {
-    color: #F3F4F6;
-    transition: 0.2s ease;
+.cart svg { /* Icono del carrito */
+    color: #F3F4F6; /* Blanco */
+    transition: 0.2s ease; /* Animación suave */
 }
 
 /* Logo */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo { /* Contenedor del logo */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espaciado */
 }
 
-.logo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
+.logo img { /* Imagen del logo */
+    width: 40px; /* Tamaño */
+    height: 40px; /* Tamaño */
+    border-radius: 6px; /* Bordes redondeados */
 }
 
-.campus-shop {
-    font-size: 20px;
-    font-weight: bold;
-    color: #F3F4F6;
-    font-family: "Bebas Neue", cursive;
+.campus-shop { /* Texto del logo */
+    font-size: 20px; /* Tamaño */
+    font-weight: bold; /* Negrita */
+    color: #F3F4F6; /* Blanco */
+    font-family: "Bebas Neue", cursive; /* Fuente decorativa */
 }
 
 /* Nav */
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.nav { /* Contenedor de navegación */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espaciado */
 }
-.nav .btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
-    background: transparent;
-    border: 1px solid transparent;
-    color: #F3F4F6;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.2s ease;
-    text-decoration: none;
-}
-
-.nav .btn svg {
-    color: #F3F4F6;
-    transition: 0.2s ease;
-}
-.nav .btn:hover {
-    color: #7fc6e2;
+.nav .btn { /* Botones del nav */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 6px; /* Espaciado */
+    padding: 6px 10px; /* Espaciado interno */
+    background: transparent; /* Sin fondo */
+    border: 1px solid transparent; /* Sin borde visible */
+    color: #F3F4F6; /* Blanco */
+    font-size: 14px; /* Tamaño */
+    cursor: pointer; /* Cursor clickeable */
+    border-radius: 6px; /* Bordes redondeados */
+    transition: 0.2s ease; /* Animación */
+    text-decoration: none; /* Sin subrayado */
 }
 
-.nav .btn:hover svg {
-    color: #7fc6e2;
+.nav .btn svg { /* Iconos del nav */
+    color: #F3F4F6; /* Blanco */
+    transition: 0.2s ease; /* Animación */
 }
-.nav .btn:active {
-    background: rgba(75, 0, 130, 0.15);
-    border-color: #7fc6e2;
-    color: #7fc6e2;
+.nav .btn:hover { /* Hover del botón */
+    color: #7fc6e2; /* Azul claro */
 }
 
-.nav .btn:active svg {
-    color: #7fc6e2;
+.nav .btn:hover svg { /* Hover del icono */
+    color: #7fc6e2; /* Azul claro */
+}
+.nav .btn:active { /* Estado activo */
+    background: rgba(75, 0, 130, 0.15); /* Fondo morado transparente */
+    border-color: #7fc6e2; /* Borde azul */
+    color: #7fc6e2; /* Texto azul */
+}
+
+.nav .btn:active svg { /* Icono activo */
+    color: #7fc6e2; /* Azul */
 }
 /* Search */
-.search {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    background: #d7a4f4;
-    border-bottom: 1px solid #cbd4d7;
+.search { /* Contenedor del buscador */
+    display: flex; /* Alineación horizontal */
+    justify-content: center; /* Centrado */
+    padding: 15px; /* Espaciado */
+    background: #d7a4f4; /* Fondo lila */
+    border-bottom: 1px solid #cbd4d7; /* Línea inferior */
 }
 
-.search input {
-    width: 65%;
-    padding: 10px;
-    border: 1px solid #3582a6;
-    border-radius: 6px 0 0 6px;
-    outline: none;
+.search input { /* Input del buscador */
+    width: 65%; /* Ancho */
+    padding: 10px; /* Espaciado */
+    border: 1px solid #3582a6; /* Borde azul */
+    border-radius: 6px 0 0 6px; /* Bordes redondeados izquierda */
+    outline: none; /* Sin borde azul */
 }
 
-.search-btn {
-    padding: 10px 14px;
-    border: 1px solid #ccc;
-    border-left: none;
-    background: #4B0082;
-    border-radius: 0 6px 6px 0;
-    cursor: pointer;
+.search-btn { /* Botón del buscador */
+    padding: 10px 14px; /* Espaciado */
+    border: 1px solid #ccc; /* Borde gris */
+    border-left: none; /* Sin borde izquierdo */
+    background: #4B0082; /* Fondo morado */
+    border-radius: 0 6px 6px 0; /* Bordes redondeados derecha */
+    cursor: pointer; /* Cursor clickeable */
 }
 
-.search-btn svg {
-    width: 20px;
-    height: 20px;
+.search-btn svg { /* Icono del botón */
+    width: 20px; /* Tamaño */
+    height: 20px; /* Tamaño */
 }
 
 .nav a:hover svg,
 .menu-btn:hover svg,
-.search-btn:hover svg {
-    color:#7fc6e2;
-    transition: 0.2s ease;
-    transform: scale(1.15);
+.search-btn:hover svg { /* Hover general de iconos */
+    color:#7fc6e2; /* Azul claro */
+    transition: 0.2s ease; /* Animación */
+    transform: scale(1.15); /* Aumenta tamaño */
 }
 
 /* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 60px;
-    left: -250px; 
-    width: 250px;
-    height: 100%;
-    background: #44a7d8;
-    border-right: 1px solid #e0e0e0;
-    padding: 20px;
-    transition: left 0.3s ease;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-    z-index: 1000;
+.sidebar { /* Menú lateral */
+    position: fixed; /* Fijo */
+    top: 60px; /* Debajo del header */
+    left: -250px; /* Oculto */
+    width: 250px; /* Ancho */
+    height: 100%; /* Alto completo */
+    background: #44a7d8; /* Azul */
+    border-right: 1px solid #e0e0e0; /* Línea derecha */
+    padding: 20px; /* Espaciado */
+    transition: left 0.3s ease; /* Animación */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1); /* Sombra */
+    z-index: 1000; /* Prioridad */
 }
 
-.menu-toggle:checked ~ .sidebar {
-    left: 0;
+.menu-toggle:checked ~ .sidebar { /* Cuando el menú está activado */
+    left: 0; /* Sidebar visible */
 }
 
-.sidebar ul {
-    list-style: none;
-    margin-top: 40px;
-    padding: 0;
+.sidebar ul { /* Lista del menú */
+    list-style: none; /* Sin viñetas */
+    margin-top: 40px; /* Separación superior */
+    padding: 0; /* Sin padding */
 }
 
-.sidebar li {
-    margin-bottom: 18px;
+.sidebar li { /* Elementos del menú */
+    margin-bottom: 18px; /* Espaciado */
 }
 
-.sidebar a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color:#F3F4F6    ;
-    font-size: 16px;
-    transition: 0.2s ease;
+.sidebar a { /* Enlaces del menú */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espaciado */
+    text-decoration: none; /* Sin subrayado */
+    color:#F3F4F6; /* Blanco */
+    font-size: 16px; /* Tamaño */
+    transition: 0.2s ease; /* Animación */
 }
 
-.sidebar a:hover {
-    color: #4B0082;
+.sidebar a:hover { /* Hover */
+    color: #4B0082; /* Morado */
 }
 
-.sidebar a svg {
-    width: 22px;
-    height: 22px;
-    color: #F3F4F6;
-    transition: 0.2s ease;
+.sidebar a svg { /* Iconos del menú */
+    width: 22px; /* Tamaño */
+    height: 22px; /* Tamaño */
+    color: #F3F4F6; /* Blanco */
+    transition: 0.2s ease; /* Animación */
 }
 
-.sidebar a:hover svg {
-    color: #4B0082;
-}
-:root {
-    --color-primary: #1E3A8A;      
-    --color-secondary: #6A5ACD;    
-    --color-background: #F5F5F7;   
-    --color-surface: #FFFFFF;      
-    --color-text: #333333;
-    --color-text-light: #6A6A6A;
+.sidebar a:hover svg { /* Hover icono */
+    color: #4B0082; /* Morado */
 }
 
-.perfil-container {
-    width: 350px;
-    background: var(--color-surface);
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    text-align: center;
-    margin-bottom: 25px;
+/* Variables globales */
+:root { /* Variables CSS */
+    --color-primary: #1E3A8A; /* Azul oscuro */
+    --color-secondary: #6A5ACD; /* Morado */
+    --color-background: #F5F5F7; /* Fondo claro */
+    --color-surface: #FFFFFF; /* Superficie blanca */
+    --color-text: #333333; /* Texto oscuro */
+    --color-text-light: #6A6A6A; /* Texto gris claro */
 }
 
-.foto-perfil img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #6a5acd33;
+.perfil-container { /* Contenedor del perfil */
+    width: 350px; /* Ancho */
+    background: var(--color-surface); /* Fondo blanco */
+    padding: 25px; /* Espaciado */
+    border-radius: 18px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Sombra */
+    text-align: center; /* Centrado */
+    margin-bottom: 25px; /* Espaciado inferior */
 }
 
-h1 {
-    font-size: 20px;
-    margin-top: 10px;
-    color: var(--color-primary);
+.foto-perfil img { /* Foto de perfil */
+    width: 110px; /* Tamaño */
+    height: 110px; /* Tamaño */
+    border-radius: 50%; /* Circular */
+    object-fit: cover; /* Recorta sin deformar */
+    border: 3px solid #6a5acd33; /* Borde morado translúcido */
 }
 
-h2 {
-    margin: 10px 0 5px;
-    font-size: 22px;
-    font-weight: 600;
+h1 { /* Título principal */
+    font-size: 20px; /* Tamaño */
+    margin-top: 10px; /* Espaciado superior */
+    color: var(--color-primary); /* Azul */
 }
 
-.usuario {
-    color: var(--color-text-light);
-    margin-bottom: 8px;
+h2 { /* Subtítulo */
+    margin: 10px 0 5px; /* Espaciado */
+    font-size: 22px; /* Tamaño */
+    font-weight: 600; /* Seminegrita */
 }
 
-.info {
-    font-size: 14px;
-    color: #777;
+.usuario { /* Nombre de usuario */
+    color: var(--color-text-light); /* Gris claro */
+    margin-bottom: 8px; /* Espaciado inferior */
 }
 
-.btn-editar {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: var(--color-secondary);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.25s;
-    font-weight: 500;
+.info { /* Información adicional */
+    font-size: 14px; /* Tamaño */
+    color: #777; /* Gris */
 }
 
-.btn-editar:hover {
-    background:#44a7d8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(106, 90, 205, 0.3);
+.btn-editar { /* Botón editar perfil */
+    margin-top: 15px; /* Espaciado superior */
+    padding: 10px 20px; /* Espaciado interno */
+    background: var(--color-secondary); /* Morado */
+    color: white; /* Blanco */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    transition: 0.25s; /* Animación */
+    font-weight: 500; /* Seminegrita */
 }
 
-.perfil-menu {
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.btn-editar:hover { /* Hover del botón */
+    background:#44a7d8; /* Azul claro */
+    transform: translateY(-2px); /* Se eleva */
+    box-shadow: 0 4px 12px rgba(106, 90, 205, 0.3); /* Sombra */
 }
 
-.item {
-    background: #f4f4ff;
-    padding: 14px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: var(--color-text);
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    gap: 12px; 
-    transition: 0.25s;
+.perfil-menu { /* Menú del perfil */
+    width: 350px; /* Ancho */
+    display: flex; /* Columna */
+    flex-direction: column; /* Columna */
+    gap: 15px; /* Espaciado */
 }
 
-.item svg {
-    width: 22px;
-    height: 22px;
-    color: var(--color-secondary);
+.item { /* Elemento del menú */
+    background: #f4f4ff; /* Fondo lila claro */
+    padding: 14px; /* Espaciado */
+    border-radius: 12px; /* Bordes */
+    text-decoration: none; /* Sin subrayado */
+    color: var(--color-text); /* Texto oscuro */
+    font-size: 15px; /* Tamaño */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 12px; /* Espaciado */
+    transition: 0.25s; /* Animación */
 }
 
-.item:hover {
-    background: #e4e4ff;
-    transform: translateX(4px);
-}
-.item:last-child {
-    background: #ffecec;
-    color: #d9534f;
+.item svg { /* Iconos del menú */
+    width: 22px; /* Tamaño */
+    height: 22px; /* Tamaño */
+    color: var(--color-secondary); /* Morado */
 }
 
-.item:last-child svg {
-    color: #d9534f;
+.item:hover { /* Hover del menú */
+    background: #e4e4ff; /* Lila más claro */
+    transform: translateX(4px); /* Se mueve a la derecha */
 }
 
-.item:last-child:hover {
-    background: #ffdada;
+.item:last-child { /* Botón de cerrar sesión */
+    background: #ffecec; /* Fondo rojo claro */
+    color: #d9534f; /* Rojo */
+}
+
+.item:last-child svg { /* Icono rojo */
+    color: #d9534f; /* Rojo */
+}
+
+.item:last-child:hover { /* Hover cerrar sesión */
+    background: #ffdada; /* Rojo más claro */
 }

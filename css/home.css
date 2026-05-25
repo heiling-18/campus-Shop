@@ -214,6 +214,7 @@ body { /* Estilos generales del body */
 .sidebar a:hover svg { /* Hover del icono */
     color: #4B0082; /* Morado */
 }
+
 /* categorias */
 .categorias-container { /* Contenedor de categorías */
     display: flex; /* Alineación horizontal */

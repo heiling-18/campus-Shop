@@ -1,78 +1,79 @@
-body {
-    font-family: 'Inter', sans-serif;
-    background: #f4f4ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+body { /* Estilos generales del body */
+    font-family: 'Inter', sans-serif; /* Fuente principal */
+    background: #f4f4ff; /* Fondo lila muy claro */
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes */
 }
 
-.login-container {
-    background: white;
-    padding: 35px;
-    width: 350px;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    text-align: center;
+.login-container { /* Contenedor principal del login */
+    background: white; /* Fondo blanco */
+    padding: 35px; /* Espaciado interno */
+    width: 350px; /* Ancho fijo */
+    border-radius: 14px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Sombra suave */
+    text-align: center; /* Centra el contenido */
 }
 
-.login-container h2 {
-    margin-bottom: 20px;
-    color: #3a71e8;
-    font-weight: 600;
+.login-container h2 { /* Título del login */
+    margin-bottom: 20px; /* Espaciado inferior */
+    color: #3a71e8; /* Azul */
+    font-weight: 600; /* Seminegrita */
 }
 
-.login-form .input-group {
-    text-align: left;
-    margin-bottom: 18px;
+.login-form .input-group { /* Contenedor de cada input */
+    text-align: left; /* Alinea texto a la izquierda */
+    margin-bottom: 18px; /* Espaciado inferior */
 }
 
-.input-group label {
-    font-size: 14px;
-    color: #333;
+.input-group label { /* Etiquetas de los inputs */
+    font-size: 14px; /* Tamaño de texto */
+    color: #333; /* Gris oscuro */
 }
 
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-    outline: none;
-    transition: 0.2s;
+.input-group input { /* Campos de texto */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 6px; /* Separación respecto al label */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 15px; /* Tamaño de texto */
+    outline: none; /* Quita borde azul del navegador */
+    transition: 0.2s; /* Animación suave */
 }
 
-.input-group input:focus {
-    border-color: #1740b9;
-    box-shadow: 0 0 4px rgba(106, 91, 255, 0.4);
+.input-group input:focus { /* Cuando el input está seleccionado */
+    border-color: #1740b9; /* Borde azul */
+    box-shadow: 0 0 4px rgba(106, 91, 255, 0.4); /* Resplandor azul */
 }
 
-.btn-login {
-    display: block;
-    text-align: center;
-    width: 100%;
-    padding: 12px;
-    background: #1740b9;
-    color: white;
-    border-radius: 8px;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.2s;
+.btn-login { /* Botón de iniciar sesión */
+    display: block; /* Se comporta como bloque */
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 12px; /* Espaciado interno */
+    background: #1740b9; /* Azul */
+    color: white; /* Texto blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de texto */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cursor de mano */
+    transition: 0.2s; /* Animación suave */
 }
 
-.btn-login:hover {
-    background: #5848e5;
-}
-.register-text {
-    margin-top: 15px;
-    font-size: 14px;
+.btn-login:hover { /* Hover del botón */
+    background: #5848e5; /* Azul más claro */
 }
 
-.register-text a {
-    color:  #1740b9;
-    text-decoration: none;
-    font-weight: 500;
+.register-text { /* Texto debajo del botón */
+    margin-top: 15px; /* Espaciado superior */
+    font-size: 14px; /* Tamaño de texto */
+}
+
+.register-text a { /* Enlace de registro */
+    color:  #1740b9; /* Azul */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 500; /* Seminegrita */
 }

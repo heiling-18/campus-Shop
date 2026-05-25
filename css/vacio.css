@@ -1,256 +1,269 @@
-.carrito-vacio {
-    text-align: center;
-    padding: 200px 20px;
-    color: #4B5563;
+.carrito-vacio { /* Contenedor del mensaje de carrito vacío */
+    text-align: center; /* Centra el texto */
+    padding: 200px 20px; /* Espaciado grande vertical */
+    color: #4B5563; /* Gris oscuro */
 }
 
-.icono-carrito svg {
-    color: #4C1D95;
-    opacity: 0.9;
-    margin-bottom: 25px;
+.icono-carrito svg { /* Icono del carrito vacío */
+    color: #4C1D95; /* Morado */
+    opacity: 0.9; /* Ligera transparencia */
+    margin-bottom: 25px; /* Espaciado inferior */
 }
 
-.carrito-vacio h2 {
-    font-size: 1.8rem;
-    color: #4C1D95;
-    margin-bottom: 10px;
+.carrito-vacio h2 { /* Título del carrito vacío */
+    font-size: 1.8rem; /* Tamaño grande */
+    color: #4C1D95; /* Morado */
+    margin-bottom: 10px; /* Espaciado inferior */
 }
 
-.carrito-vacio p {
-    font-size: 1rem;
-    color: #6B7280;
+.carrito-vacio p { /* Texto descriptivo */
+    font-size: 1rem; /* Tamaño normal */
+    color: #6B7280; /* Gris */
 }
 
-.btn-volver {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 24px;
-    background: #3B82F6; 
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.2s ease;
+.btn-volver { /* Botón para volver a comprar */
+    display: inline-block; /* Elemento en línea tipo bloque */
+    margin-top: 25px; /* Espaciado superior */
+    padding: 12px 24px; /* Espaciado interno */
+    background: #3B82F6; /* Azul */
+    color: white; /* Blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 600; /* Seminegrita */
+    transition: 0.2s ease; /* Animación */
 }
 
-.btn-volver:hover {
-    background: #2563EB;
+.btn-volver:hover { /* Hover del botón */
+    background: #2563EB; /* Azul más oscuro */
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+* { /* Reset global */
+    margin: 0; /* Quita márgenes */
+    padding: 0; /* Quita padding */
+    box-sizing: border-box; /* Incluye borde y padding en el tamaño total */
 }
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #F3F4F6;
-    font-family: "Inter", sans-serif;
-    background: #F5F5F7;
-    margin: 0;
-    padding: 0;
+
+body { /* Estilos generales del body */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente base */
+    background: #F3F4F6; /* Fondo gris claro */
+    font-family: "Inter", sans-serif; /* Sobrescribe la fuente */
+    background: #F5F5F7; /* Fondo gris suave */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
 }
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 18px;
-    background: #4B0082;
-    border-bottom: 1px solid #e0e0e0;
+
+.header { /* Barra superior */
+    width: 100%; /* Ocupa todo el ancho */
+    display: flex; /* Alineación horizontal */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrado vertical */
+    padding: 12px 18px; /* Espaciado interno */
+    background: #4B0082; /* Morado */
+    border-bottom: 1px solid #e0e0e0; /* Línea inferior */
 }
-.contenido {
-    min-height: calc(100vh - 70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-    padding-top: 20px; 
+
+.contenido { /* Contenedor principal */
+    min-height: calc(100vh - 70px); /* Altura menos header */
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Columna */
+    justify-content: flex-start; /* Alinea arriba */
+    align-items: center; /* Centra horizontalmente */
+    padding-top: 20px; /* Espaciado superior */
 }
-.perfil-container {
-    margin-top: 40px;
+
+.perfil-container { /* Contenedor del perfil */
+    margin-top: 40px; /* Separación superior */
 }
+
 /* Ocultar checkbox */
-.menu-toggle {
-    display: none;
-}
-.header {
-    position: relative;
-    z-index: 1500;
+.menu-toggle { /* Checkbox del menú lateral */
+    display: none; /* Oculto */
 }
 
-.menu-btn {
-    position: relative;
-    z-index: 2000; 
-    cursor: pointer;
+.header { /* Refuerzo de posición */
+    position: relative; /* Referencia para z-index */
+    z-index: 1500; /* Encima del sidebar */
 }
+
+.menu-btn { /* Botón del menú */
+    position: relative; /* Posicionamiento */
+    z-index: 2000; /* Encima del sidebar */
+    cursor: pointer; /* Cursor de mano */
+}
+
 /* Menu Button */
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
+.menu-btn { /* Botón sin estilos nativos */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor clickeable */
+    padding: 6px; /* Área clickeable */
 }
 
-.menu-btn svg {
-    width: 26px;
-    height: 26px;
-    color: #F3F4F6;
+.menu-btn svg { /* Icono del menú */
+    width: 26px; /* Tamaño */
+    height: 26px; /* Tamaño */
+    color: #F3F4F6; /* Blanco */
 }
-.cart svg {
-    color: #F3F4F6;
-    transition: 0.2s ease;
+
+.cart svg { /* Icono del carrito */
+    color: #F3F4F6; /* Blanco */
+    transition: 0.2s ease; /* Animación suave */
 }
 
 /* Logo */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo { /* Contenedor del logo */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espaciado */
 }
 
-.logo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
+.logo img { /* Imagen del logo */
+    width: 40px; /* Tamaño */
+    height: 40px; /* Tamaño */
+    border-radius: 6px; /* Bordes redondeados */
 }
 
-.campus-shop {
-    font-size: 20px;
-    font-weight: bold;
-    color: #F3F4F6;
-    font-family: "Bebas Neue", cursive;
+.campus-shop { /* Texto del logo */
+    font-size: 20px; /* Tamaño */
+    font-weight: bold; /* Negrita */
+    color: #F3F4F6; /* Blanco */
+    font-family: "Bebas Neue", cursive; /* Fuente decorativa */
 }
 
 /* Nav */
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.nav .btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
-    background: transparent;
-    border: 1px solid transparent;
-    color: #F3F4F6;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.2s ease;
-    text-decoration: none;
+.nav { /* Contenedor de navegación */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espaciado */
 }
 
-.nav .btn svg {
-    color: #F3F4F6;
-    transition: 0.2s ease;
-}
-.nav .btn:hover {
-    color: #7fc6e2;
-}
-
-.nav .btn:hover svg {
-    color: #7fc6e2;
-}
-.nav .btn:active {
-    background: rgba(75, 0, 130, 0.15);
-    border-color: #7fc6e2;
-    color: #7fc6e2;
+.nav .btn { /* Botones del nav */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 6px; /* Espaciado */
+    padding: 6px 10px; /* Espaciado interno */
+    background: transparent; /* Sin fondo */
+    border: 1px solid transparent; /* Sin borde visible */
+    color: #F3F4F6; /* Blanco */
+    font-size: 14px; /* Tamaño */
+    cursor: pointer; /* Cursor clickeable */
+    border-radius: 6px; /* Bordes redondeados */
+    transition: 0.2s ease; /* Animación */
+    text-decoration: none; /* Sin subrayado */
 }
 
-.nav .btn:active svg {
-    color: #7fc6e2;
+.nav .btn svg { /* Iconos del nav */
+    color: #F3F4F6; /* Blanco */
+    transition: 0.2s ease; /* Animación */
 }
+
+.nav .btn:hover { /* Hover del botón */
+    color: #7fc6e2; /* Azul claro */
+}
+
+.nav .btn:hover svg { /* Hover del icono */
+    color: #7fc6e2; /* Azul claro */
+}
+
+.nav .btn:active { /* Estado activo */
+    background: rgba(75, 0, 130, 0.15); /* Fondo morado transparente */
+    border-color: #7fc6e2; /* Borde azul */
+    color: #7fc6e2; /* Texto azul */
+}
+
+.nav .btn:active svg { /* Icono activo */
+    color: #7fc6e2; /* Azul */
+}
+
 /* Search */
-.search {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    background: #d7a4f4;
-    border-bottom: 1px solid #cbd4d7;
+.search { /* Contenedor del buscador */
+    display: flex; /* Alineación horizontal */
+    justify-content: center; /* Centrado */
+    padding: 15px; /* Espaciado */
+    background: #d7a4f4; /* Fondo lila */
+    border-bottom: 1px solid #cbd4d7; /* Línea inferior */
 }
 
-.search input {
-    width: 65%;
-    padding: 10px;
-    border: 1px solid #3582a6;
-    border-radius: 6px 0 0 6px;
-    outline: none;
+.search input { /* Input del buscador */
+    width: 65%; /* Ancho */
+    padding: 10px; /* Espaciado */
+    border: 1px solid #3582a6; /* Borde azul */
+    border-radius: 6px 0 0 6px; /* Bordes redondeados izquierda */
+    outline: none; /* Sin borde azul */
 }
 
-.search-btn {
-    padding: 10px 14px;
-    border: 1px solid #ccc;
-    border-left: none;
-    background: #4B0082;
-    border-radius: 0 6px 6px 0;
-    cursor: pointer;
+.search-btn { /* Botón del buscador */
+    padding: 10px 14px; /* Espaciado */
+    border: 1px solid #ccc; /* Borde gris */
+    border-left: none; /* Sin borde izquierdo */
+    background: #4B0082; /* Morado */
+    border-radius: 0 6px 6px 0; /* Bordes redondeados derecha */
+    cursor: pointer; /* Cursor clickeable */
 }
 
-.search-btn svg {
-    width: 20px;
-    height: 20px;
+.search-btn svg { /* Icono del botón */
+    width: 20px; /* Tamaño */
+    height: 20px; /* Tamaño */
 }
 
 .nav a:hover svg,
 .menu-btn:hover svg,
-.search-btn:hover svg {
-    color:#7fc6e2;
-    transition: 0.2s ease;
-    transform: scale(1.15);
+.search-btn:hover svg { /* Hover general de iconos */
+    color:#7fc6e2; /* Azul claro */
+    transition: 0.2s ease; /* Animación */
+    transform: scale(1.15); /* Aumenta tamaño */
 }
 
 /* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 60px;
-    left: -250px; 
-    width: 250px;
-    height: 100%;
-    background: #44a7d8;
-    border-right: 1px solid #e0e0e0;
-    padding: 20px;
-    transition: left 0.3s ease;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-    z-index: 1000;
+.sidebar { /* Menú lateral */
+    position: fixed; /* Fijo */
+    top: 60px; /* Debajo del header */
+    left: -250px; /* Oculto */
+    width: 250px; /* Ancho */
+    height: 100%; /* Alto completo */
+    background: #44a7d8; /* Azul */
+    border-right: 1px solid #e0e0e0; /* Línea derecha */
+    padding: 20px; /* Espaciado */
+    transition: left 0.3s ease; /* Animación */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1); /* Sombra */
+    z-index: 1000; /* Prioridad */
 }
 
-.menu-toggle:checked ~ .sidebar {
-    left: 0;
+.menu-toggle:checked ~ .sidebar { /* Cuando el menú está activado */
+    left: 0; /* Sidebar visible */
 }
 
-.sidebar ul {
-    list-style: none;
-    margin-top: 40px;
-    padding: 0;
+.sidebar ul { /* Lista del menú */
+    list-style: none; /* Sin viñetas */
+    margin-top: 40px; /* Separación superior */
+    padding: 0; /* Sin padding */
 }
 
-.sidebar li {
-    margin-bottom: 18px;
+.sidebar li { /* Elementos del menú */
+    margin-bottom: 18px; /* Espaciado */
 }
 
-.sidebar a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color:#F3F4F6    ;
-    font-size: 16px;
-    transition: 0.2s ease;
+.sidebar a { /* Enlaces del menú */
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    gap: 10px; /* Espaciado */
+    text-decoration: none; /* Sin subrayado */
+    color:#F3F4F6; /* Blanco */
+    font-size: 16px; /* Tamaño */
+    transition: 0.2s ease; /* Animación */
 }
 
-.sidebar a:hover {
-    color: #4B0082;
+.sidebar a:hover { /* Hover */
+    color: #4B0082; /* Morado */
 }
 
-.sidebar a svg {
-    width: 22px;
-    height: 22px;
-    color: #F3F4F6;
-    transition: 0.2s ease;
+.sidebar a svg { /* Iconos del menú */
+    width: 22px; /* Tamaño */
+    height: 22px; /* Tamaño */
+    color: #F3F4F6; /* Blanco */
+    transition: 0.2s ease; /* Animación */
 }
 
-.sidebar a:hover svg {
-    color: #4B0082;
+.sidebar a:hover svg { /* Hover icono */
+    color: #4B0082; /* Morado */
 }
