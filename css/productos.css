@@ -151,6 +151,7 @@ body { /* Estilos generales del body */
     cursor: pointer; /* Cursor clickeable */
 }
 
+/* Estado hover o seleccionado */
 .size-btn:hover,
 .size-btn:has(input:checked) { /* Hover o seleccionada */
     border-color:  #4B0082; /* Morado */
@@ -244,6 +245,7 @@ body { /* Estilos generales del body */
     font-weight: 800; /* Negrita */
     color: #1a1a1a; /* Negro */
 }
+
 
 /* ── CANTIDAD ── */
 .qty-row { /* Fila de cantidad */

@@ -1,211 +1,238 @@
-.carrito-vacio { /* Contenedor del mensaje de carrito vacío */
-    text-align: center; /* Centra el texto */
-    padding: 200px 20px; /* Espaciado grande vertical */
-    color: #4B5563; /* Gris oscuro */
+/* Contenedor cuando el carrito está vacío */
+.carrito-vacio {
+    text-align: center; /* centra todo el texto horizontalmente */
+    padding: 200px 20px; /* espacio interno grande arriba/abajo y pequeño a los lados */
+    color: #4B5563; /* color gris del texto */
 }
 
-.icono-carrito svg { /* Icono del carrito vacío */
-    color: #4C1D95; /* Morado */
-    opacity: 0.9; /* Ligera transparencia */
-    margin-bottom: 25px; /* Espaciado inferior */
+/* Icono del carrito vacío */
+.icono-carrito svg {
+    color: #4C1D95; /* color morado del icono */
+    opacity: 0.9; /* leve transparencia */
+    margin-bottom: 25px; /* espacio debajo del icono */
 }
 
-.carrito-vacio h2 { /* Título del carrito vacío */
-    font-size: 1.8rem; /* Tamaño grande */
-    color: #4C1D95; /* Morado */
-    margin-bottom: 10px; /* Espaciado inferior */
+/* Título del carrito vacío */
+.carrito-vacio h2 {
+    font-size: 1.8rem; /* tamaño de letra grande */
+    color: #4C1D95; /* color morado */
+    margin-bottom: 10px; /* espacio debajo */
 }
 
-.carrito-vacio p { /* Texto descriptivo */
-    font-size: 1rem; /* Tamaño normal */
-    color: #6B7280; /* Gris */
+/* Texto descriptivo */
+.carrito-vacio p {
+    font-size: 1rem; /* tamaño normal */
+    color: #6B7280; /* gris más claro */
 }
 
-.btn-volver { /* Botón para volver a comprar */
-    display: inline-block; /* Elemento en línea tipo bloque */
-    margin-top: 25px; /* Espaciado superior */
-    padding: 12px 24px; /* Espaciado interno */
-    background: #3B82F6; /* Azul */
-    color: white; /* Blanco */
-    border-radius: 10px; /* Bordes redondeados */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: 600; /* Seminegrita */
-    transition: 0.2s ease; /* Animación */
+/* Botón para volver */
+.btn-volver {
+    display: inline-block; /* permite padding y margen como bloque pero en línea */
+    margin-top: 25px; /* separación arriba */
+    padding: 12px 24px; /* espacio interno */
+    background: #3B82F6; /* color azul */
+    color: white; /* texto blanco */
+    border-radius: 10px; /* bordes redondeados */
+    text-decoration: none; /* quita subrayado */
+    font-weight: 600; /* texto semi-negrita */
+    transition: 0.2s ease; /* animación suave */
 }
 
-.btn-volver:hover { /* Hover del botón */
-    background: #2563EB; /* Azul más oscuro */
+/* Hover del botón */
+.btn-volver:hover {
+    background: #2563EB; /* azul más oscuro al pasar el mouse */
 }
 
-* { /* Reset global */
-    margin: 0; /* Quita márgenes */
-    padding: 0; /* Quita padding */
-    box-sizing: border-box; /* Incluye borde y padding en el tamaño total */
+/* Reset global */
+* {
+    margin: 0; /* elimina márgenes por defecto */
+    padding: 0; /* elimina rellenos */
+    box-sizing: border-box; /* incluye padding y borde en tamaño total */
 }
 
-body { /* Estilos generales del body */
-    font-family: Arial, Helvetica, sans-serif; /* Fuente base */
-    background: #F3F4F6; /* Fondo gris claro */
-    font-family: "Inter", sans-serif; /* Sobrescribe la fuente */
-    background: #F5F5F7; /* Fondo gris suave */
-    margin: 0; /* Sin margen */
-    padding: 0; /* Sin padding */
+/* Estilos generales del body */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* fuente base */
+    background: #F3F4F6; /* fondo inicial */
+    font-family: "Inter", sans-serif; /* sobrescribe la fuente */
+    background: #F5F5F7; /* sobrescribe el fondo */
+    margin: 0; /* elimina margen */
+    padding: 0; /* elimina padding */
 }
 
-.header { /* Barra superior */
-    width: 100%; /* Ocupa todo el ancho */
-    display: flex; /* Alineación horizontal */
-    justify-content: space-between; /* Espacio entre elementos */
-    align-items: center; /* Centrado vertical */
-    padding: 12px 18px; /* Espaciado interno */
-    background: #4B0082; /* Morado */
-    border-bottom: 1px solid #e0e0e0; /* Línea inferior */
+/* Header */
+.header {
+    width: 100%; /* ocupa todo el ancho */
+    display: flex; /* activa flexbox */
+    justify-content: space-between; /* separa elementos */
+    align-items: center; /* centra verticalmente */
+    padding: 12px 18px; /* espacio interno */
+    background: #4B0082; /* fondo morado */
+    border-bottom: 1px solid #e0e0e0; /* línea inferior */
 }
 
-.contenido { /* Contenedor principal */
-    min-height: calc(100vh - 70px); /* Altura menos header */
-    display: flex; /* Activa flexbox */
-    flex-direction: column; /* Columna */
-    justify-content: flex-start; /* Alinea arriba */
-    align-items: center; /* Centra horizontalmente */
-    padding-top: 20px; /* Espaciado superior */
+/* Contenedor general */
+.contenido {
+    min-height: calc(100vh - 70px); /* altura mínima pantalla completa */
+    display: flex; /* flexbox */
+    flex-direction: column; /* en columna */
+    justify-content: flex-start; /* contenido arriba */
+    align-items: center; /* centrado horizontal */
+    padding-top: 20px; /* espacio arriba */
 }
 
-.perfil-container { /* Contenedor del perfil */
-    margin-top: 40px; /* Separación superior */
+/* Contenedor perfil */
+.perfil-container {
+    margin-top: 40px; /* separación superior */
 }
 
-/* Ocultar checkbox */
-.menu-toggle { /* Checkbox del menú lateral */
-    display: none; /* Oculto */
+/* Checkbox oculto */
+.menu-toggle {
+    display: none; /* no visible */
 }
 
-.header { /* Refuerzo de posición */
-    position: relative; /* Referencia para z-index */
-    z-index: 1500; /* Encima del sidebar */
+/* Header con capas */
+.header {
+    position: relative; /* referencia para posicionamiento */
+    z-index: 1500; /* capa alta */
 }
 
-.menu-btn { /* Botón del menú */
-    position: relative; /* Posicionamiento */
-    z-index: 2000; /* Encima del sidebar */
-    cursor: pointer; /* Cursor de mano */
+/* Botón menú */
+.menu-btn {
+    position: relative; /* referencia */
+    z-index: 2000; /* por encima del header */
+    cursor: pointer; /* cursor mano */
 }
 
-/* Menu Button */
-.menu-btn { /* Botón sin estilos nativos */
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cursor clickeable */
-    padding: 6px; /* Área clickeable */
+/* Estilo botón menú */
+.menu-btn {
+    background: none; /* sin fondo */
+    border: none; /* sin borde */
+    cursor: pointer; /* cursor mano */
+    padding: 6px; /* espacio interno */
 }
 
-.menu-btn svg { /* Icono del menú */
-    width: 26px; /* Tamaño */
-    height: 26px; /* Tamaño */
-    color: #F3F4F6; /* Blanco */
+/* Icono menú */
+.menu-btn svg {
+    width: 26px; /* ancho */
+    height: 26px; /* alto */
+    color: #F3F4F6; /* color blanco */
 }
 
-.cart svg { /* Icono del carrito */
-    color: #F3F4F6; /* Blanco */
-    transition: 0.2s ease; /* Animación suave */
+/* Icono carrito */
+.cart svg {
+    color: #F3F4F6; /* color inicial */
+    transition: 0.2s ease; /* animación */
 }
 
 /* Logo */
-.logo { /* Contenedor del logo */
-    display: flex; /* Alineación horizontal */
-    align-items: center; /* Centrado vertical */
-    gap: 10px; /* Espaciado */
+.logo {
+    display: flex; /* flexbox */
+    align-items: center; /* centra vertical */
+    gap: 10px; /* espacio entre elementos */
 }
 
-.logo img { /* Imagen del logo */
-    width: 40px; /* Tamaño */
-    height: 40px; /* Tamaño */
-    border-radius: 6px; /* Bordes redondeados */
+/* Imagen logo */
+.logo img {
+    width: 40px; /* ancho */
+    height: 40px; /* alto */
+    border-radius: 6px; /* bordes redondeados */
 }
 
-.campus-shop { /* Texto del logo */
-    font-size: 20px; /* Tamaño */
-    font-weight: bold; /* Negrita */
-    color: #F3F4F6; /* Blanco */
-    font-family: "Bebas Neue", cursive; /* Fuente decorativa */
+/* Texto logo */
+.campus-shop {
+    font-size: 20px; /* tamaño */
+    font-weight: bold; /* negrita */
+    color: #F3F4F6; /* blanco */
+    font-family: "Bebas Neue", cursive; /* fuente */
 }
 
-/* Nav */
-.nav { /* Contenedor de navegación */
-    display: flex; /* Alineación horizontal */
-    align-items: center; /* Centrado vertical */
-    gap: 10px; /* Espaciado */
+/* Navegación */
+.nav {
+    display: flex; /* flexbox */
+    align-items: center; /* centra vertical */
+    gap: 10px; /* espacio */
 }
 
-.nav .btn { /* Botones del nav */
-    display: flex; /* Alineación horizontal */
-    align-items: center; /* Centrado vertical */
-    gap: 6px; /* Espaciado */
-    padding: 6px 10px; /* Espaciado interno */
-    background: transparent; /* Sin fondo */
-    border: 1px solid transparent; /* Sin borde visible */
-    color: #F3F4F6; /* Blanco */
-    font-size: 14px; /* Tamaño */
-    cursor: pointer; /* Cursor clickeable */
-    border-radius: 6px; /* Bordes redondeados */
-    transition: 0.2s ease; /* Animación */
-    text-decoration: none; /* Sin subrayado */
+/* Botones nav */
+.nav .btn {
+    display: flex; /* flexbox */
+    align-items: center; /* centra */
+    gap: 6px; /* espacio */
+    padding: 6px 10px; /* espacio interno */
+    background: transparent; /* sin fondo */
+    border: 1px solid transparent; /* borde invisible */
+    color: #F3F4F6; /* texto blanco */
+    font-size: 14px; /* tamaño */
+    cursor: pointer; /* mano */
+    border-radius: 6px; /* bordes */
+    transition: 0.2s ease; /* animación */
+    text-decoration: none; /* sin subrayado */
 }
 
-.nav .btn svg { /* Iconos del nav */
-    color: #F3F4F6; /* Blanco */
-    transition: 0.2s ease; /* Animación */
+/* Iconos nav */
+.nav .btn svg {
+    color: #F3F4F6;
+    transition: 0.2s ease;
 }
 
-.nav .btn:hover { /* Hover del botón */
-    color: #7fc6e2; /* Azul claro */
+/* Hover botón */
+.nav .btn:hover {
+    color: #7fc6e2;
 }
 
-.nav .btn:hover svg { /* Hover del icono */
-    color: #7fc6e2; /* Azul claro */
+/* Hover icono */
+.nav .btn:hover svg {
+    color: #7fc6e2;
 }
 
-.nav .btn:active { /* Estado activo */
-    background: rgba(75, 0, 130, 0.15); /* Fondo morado transparente */
-    border-color: #7fc6e2; /* Borde azul */
-    color: #7fc6e2; /* Texto azul */
+/* Click botón */
+.nav .btn:active {
+    background: rgba(75, 0, 130, 0.15);
+    border-color: #7fc6e2;
+    color: #7fc6e2;
 }
 
-.nav .btn:active svg { /* Icono activo */
-    color: #7fc6e2; /* Azul */
+/* Icono activo */
+.nav .btn:active svg {
+    color: #7fc6e2;
 }
 
-/* Search */
-.search { /* Contenedor del buscador */
-    display: flex; /* Alineación horizontal */
-    justify-content: center; /* Centrado */
-    padding: 15px; /* Espaciado */
-    background: #d7a4f4; /* Fondo lila */
-    border-bottom: 1px solid #cbd4d7; /* Línea inferior */
+/* Buscador */
+.search {
+    display: flex; /* flexbox */
+    justify-content: center; /* centra horizontal */
+    padding: 15px; /* espacio interno */
+    background: #d7a4f4; /* fondo */
+    border-bottom: 1px solid #cbd4d7; /* línea inferior */
 }
 
-.search input { /* Input del buscador */
-    width: 65%; /* Ancho */
-    padding: 10px; /* Espaciado */
-    border: 1px solid #3582a6; /* Borde azul */
-    border-radius: 6px 0 0 6px; /* Bordes redondeados izquierda */
-    outline: none; /* Sin borde azul */
+/* Input buscador */
+.search input {
+    width: 65%; /* ancho relativo */
+    padding: 10px; /* espacio interno */
+    border: 1px solid #3582a6; /* borde */
+    border-radius: 6px 0 0 6px; /* bordes redondeados solo izquierda */
+    outline: none; /* elimina borde azul al hacer focus */
 }
 
-.search-btn { /* Botón del buscador */
-    padding: 10px 14px; /* Espaciado */
-    border: 1px solid #ccc; /* Borde gris */
-    border-left: none; /* Sin borde izquierdo */
-    background: #4B0082; /* Morado */
-    border-radius: 0 6px 6px 0; /* Bordes redondeados derecha */
-    cursor: pointer; /* Cursor clickeable */
+/* Botón buscador */
+.search-btn {
+    padding: 10px 14px; /* espacio interno */
+    border: 1px solid #ccc; /* borde */
+    border-left: none; /* elimina borde izquierdo */
+    background: #4B0082; /* fondo */
+    border-radius: 0 6px 6px 0; /* bordes derecha */
+    cursor: pointer; /* mano */
 }
 
-.search-btn svg { /* Icono del botón */
-    width: 20px; /* Tamaño */
-    height: 20px; /* Tamaño */
+/* Icono buscador */
+.search-btn svg {
+    width: 20px;
+    height: 20px;
 }
 
+/* Hover general iconos */
 .nav a:hover svg,
 .menu-btn:hover svg,
 .search-btn:hover svg { /* Hover general de iconos */
@@ -215,55 +242,62 @@ body { /* Estilos generales del body */
 }
 
 /* Sidebar */
-.sidebar { /* Menú lateral */
-    position: fixed; /* Fijo */
-    top: 60px; /* Debajo del header */
-    left: -250px; /* Oculto */
-    width: 250px; /* Ancho */
-    height: 100%; /* Alto completo */
-    background: #44a7d8; /* Azul */
-    border-right: 1px solid #e0e0e0; /* Línea derecha */
-    padding: 20px; /* Espaciado */
-    transition: left 0.3s ease; /* Animación */
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1); /* Sombra */
-    z-index: 1000; /* Prioridad */
+.sidebar {
+    position: fixed; /* fijo */
+    top: 60px; /* debajo header */
+    left: -250px; /* oculto */
+    width: 250px; /* ancho */
+    height: 100%; /* alto completo */
+    background: #44a7d8; /* fondo */
+    border-right: 1px solid #e0e0e0; /* borde */
+    padding: 20px; /* espacio */
+    transition: left 0.3s ease; /* animación */
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1); /* sombra */
+    z-index: 1000; /* capa */
 }
 
-.menu-toggle:checked ~ .sidebar { /* Cuando el menú está activado */
-    left: 0; /* Sidebar visible */
+/* Mostrar sidebar */
+.menu-toggle:checked ~ .sidebar {
+    left: 0;
 }
 
-.sidebar ul { /* Lista del menú */
-    list-style: none; /* Sin viñetas */
-    margin-top: 40px; /* Separación superior */
-    padding: 0; /* Sin padding */
+/* Lista sidebar */
+.sidebar ul {
+    list-style: none;
+    margin-top: 40px;
+    padding: 0;
 }
 
-.sidebar li { /* Elementos del menú */
-    margin-bottom: 18px; /* Espaciado */
+/* Items */
+.sidebar li {
+    margin-bottom: 18px;
 }
 
-.sidebar a { /* Enlaces del menú */
-    display: flex; /* Alineación horizontal */
-    align-items: center; /* Centrado vertical */
-    gap: 10px; /* Espaciado */
-    text-decoration: none; /* Sin subrayado */
-    color:#F3F4F6; /* Blanco */
-    font-size: 16px; /* Tamaño */
-    transition: 0.2s ease; /* Animación */
+/* Links */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color:#F3F4F6;
+    font-size: 16px;
+    transition: 0.2s ease;
 }
 
-.sidebar a:hover { /* Hover */
-    color: #4B0082; /* Morado */
+/* Hover links */
+.sidebar a:hover {
+    color: #4B0082;
 }
 
-.sidebar a svg { /* Iconos del menú */
-    width: 22px; /* Tamaño */
-    height: 22px; /* Tamaño */
-    color: #F3F4F6; /* Blanco */
-    transition: 0.2s ease; /* Animación */
+/* Iconos */
+.sidebar a svg {
+    width: 22px;
+    height: 22px;
+    color: #F3F4F6;
+    transition: 0.2s ease;
 }
 
-.sidebar a:hover svg { /* Hover icono */
-    color: #4B0082; /* Morado */
+/* Hover iconos */
+.sidebar a:hover svg {
+    color: #4B0082;
 }

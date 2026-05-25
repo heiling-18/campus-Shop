@@ -1,79 +1,92 @@
-body { /* Estilos generales del body */
-    font-family: 'Inter', sans-serif; /* Fuente principal */
-    background: #f4f4ff; /* Fondo lila muy claro */
-    display: flex; /* Activa flexbox */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: 'Inter', sans-serif; /* Fuente principal de toda la página */
+    background: #f4f4ff; /* Color de fondo general (gris muy claro azulado) */
+    
+    display: flex; /* Activa flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    
     height: 100vh; /* Ocupa toda la altura de la pantalla */
-    margin: 0; /* Elimina márgenes */
+    margin: 0; /* Elimina márgenes por defecto del navegador */
 }
 
-.login-container { /* Contenedor principal del login */
-    background: white; /* Fondo blanco */
-    padding: 35px; /* Espaciado interno */
-    width: 350px; /* Ancho fijo */
+/* Contenedor principal del login */
+.login-container {
+    background: white; /* Fondo blanco del cuadro */
+    padding: 35px; /* Espacio interno */
+    width: 350px; /* Ancho fijo del formulario */
     border-radius: 14px; /* Bordes redondeados */
     box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Sombra suave */
-    text-align: center; /* Centra el contenido */
+    text-align: center; /* Centra el texto dentro del contenedor */
 }
 
-.login-container h2 { /* Título del login */
-    margin-bottom: 20px; /* Espaciado inferior */
-    color: #3a71e8; /* Azul */
-    font-weight: 600; /* Seminegrita */
+/* Título del login */
+.login-container h2 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #3a71e8; /* Color azul del título */
+    font-weight: 600; /* Grosor de la letra */
 }
 
-.login-form .input-group { /* Contenedor de cada input */
+/* Contenedor de todo el formulario */
+.login-form .input-group {
     text-align: left; /* Alinea texto a la izquierda */
-    margin-bottom: 18px; /* Espaciado inferior */
+    margin-bottom: 18px; /* Espacio entre campos */
 }
 
-.input-group label { /* Etiquetas de los inputs */
-    font-size: 14px; /* Tamaño de texto */
-    color: #333; /* Gris oscuro */
+/* Etiquetas (labels) de los inputs */
+.input-group label {
+    font-size: 14px; /* Tamaño de letra pequeño */
+    color: #333; /* Color gris oscuro */
 }
 
-.input-group input { /* Campos de texto */
-    width: 100%; /* Ocupa todo el ancho */
-    padding: 10px; /* Espaciado interno */
-    margin-top: 6px; /* Separación respecto al label */
+/* Campos de entrada (inputs) */
+.input-group input {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espacio interno */
+    margin-top: 6px; /* Separación del label */
     border: 1px solid #ccc; /* Borde gris claro */
     border-radius: 8px; /* Bordes redondeados */
     font-size: 15px; /* Tamaño de texto */
-    outline: none; /* Quita borde azul del navegador */
-    transition: 0.2s; /* Animación suave */
+    outline: none; /* Quita borde azul por defecto */
+    transition: 0.2s; /* Animación suave al enfocar */
 }
 
-.input-group input:focus { /* Cuando el input está seleccionado */
-    border-color: #1740b9; /* Borde azul */
-    box-shadow: 0 0 4px rgba(106, 91, 255, 0.4); /* Resplandor azul */
+/* Efecto cuando el input está seleccionado */
+.input-group input:focus {
+    border-color: #1740b9; /* Cambia el color del borde */
+    box-shadow: 0 0 4px rgba(106, 91, 255, 0.4); /* Sombra azul suave */
 }
 
-.btn-login { /* Botón de iniciar sesión */
+/* Botón de iniciar sesión */
+.btn-login {
     display: block; /* Se comporta como bloque */
-    text-align: center; /* Centra el texto */
+    text-align: center; /* Centra texto */
     width: 100%; /* Ocupa todo el ancho */
-    padding: 12px; /* Espaciado interno */
-    background: #1740b9; /* Azul */
+    padding: 12px; /* Espacio interno */
+    background: #1740b9; /* Color azul del botón */
     color: white; /* Texto blanco */
     border-radius: 8px; /* Bordes redondeados */
     font-size: 16px; /* Tamaño de texto */
-    text-decoration: none; /* Sin subrayado */
-    cursor: pointer; /* Cursor de mano */
+    text-decoration: none; /* Quita subrayado */
+    cursor: pointer; /* Cursor tipo mano */
     transition: 0.2s; /* Animación suave */
 }
 
-.btn-login:hover { /* Hover del botón */
-    background: #5848e5; /* Azul más claro */
+/* Efecto hover del botón */
+.btn-login:hover {
+    background: #5848e5; /* Cambia a azul más claro */
 }
 
-.register-text { /* Texto debajo del botón */
-    margin-top: 15px; /* Espaciado superior */
-    font-size: 14px; /* Tamaño de texto */
+/* Texto de registro debajo del login */
+.register-text {
+    margin-top: 15px; /* Espacio superior */
+    font-size: 14px; /* Tamaño de letra pequeño */
 }
 
-.register-text a { /* Enlace de registro */
-    color:  #1740b9; /* Azul */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: 500; /* Seminegrita */
+/* Link de registro */
+.register-text a {
+    color:  #1740b9; /* Color azul del enlace */
+    text-decoration: none; /* Quita subrayado */
+    font-weight: 500; /* Grosor medio */
 }
