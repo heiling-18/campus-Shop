@@ -8,7 +8,7 @@
 ```
 campus-shop
 │
-├── 📁 css
+├── css
 │   ├── carrito.css
 │   ├── catalogo.css
 │   ├── checkout.css
@@ -19,10 +19,10 @@ campus-shop
 │   ├── productos.css
 │   └── vacio.css
 │
-├── 📁 img
+├── img
 │   └── (imágenes del proyecto)
 │
-├── 📁 productos
+├── productos
 │   ├── calculadora.html
 │   ├── detalle-alcohol.html
 │   ├── detalle-almohada.html
@@ -134,10 +134,10 @@ Presente en casi todas las vistas. Contiene:
 
 | Ícono | Destino |
 |-------|---------|
-| 🏠 Casa | `index.html` — Inicio |
-| 👤 Persona | `perfil.html` — Mi cuenta |
-| 🔍 Catálogo | `catalogo.html` — Catálogo |
-| 🛍️ Carrito | `historial.html` — Pedidos |
+| Casa | `index.html` — Inicio |
+| Persona | `perfil.html` — Mi cuenta |
+| Catálogo | `catalogo.html` — Catálogo |
+| Carrito | `historial.html` — Pedidos |
 
 #### Mockup — Sidebar
 
@@ -168,7 +168,7 @@ Muestra los productos que el usuario ha agregado:
 
 ---
 
-### 5. 💳 Checkout — `checkout.html`
+### 5. Checkout — `checkout.html`
 
 Proceso de finalización de compra dividido en tres secciones:
 
@@ -178,9 +178,9 @@ Proceso de finalización de compra dividido en tres secciones:
 - Ciudad
 
 **Sección 2 — Método de Pago:**
-- 💳 Visa
-- 💳 MasterCard
-- 💰 PayPal
+- Visa
+- MasterCard
+- PayPal
 
 **Sección 3 — Resumen de la Orden:**
 - Lápiz HB × 1 → $2.000
@@ -203,15 +203,15 @@ Lista de órdenes pasadas con su estado:
 
 | # Orden | Precio | Fecha | Estado |
 |---------|--------|-------|--------|
-| #12345 | $125.500 | 15 Oct, 2023 | 🟢 Entregado |
-| #12344 | $89.999 | 12 Oct, 2026 | 🟡 En camino |
-| #12343 | $210.000 | 05 Oct, 2026 | 🔴 Cancelado |
+| #12345 | $125.500 | 15 Oct, 2023 | Entregado |
+| #12344 | $89.999 | 12 Oct, 2026 | En camino |
+| #12343 | $210.000 | 05 Oct, 2026 | Cancelado |
 
 Cada tarjeta incluye un enlace **"Ver detalle"**.
 
 ####  Mockup — Historial
 
-> El boceto muestra tres tarjetas de pedido apiladas verticalmente. Cada una tiene el estado (Entregado ✓, En camino 🚚, Procesando 🔄), número de orden, fecha y total. Un botón `>` indica la acción de ver detalle.
+> El boceto muestra tres tarjetas de pedido apiladas verticalmente. Cada una tiene el estado (Entregado ✓, En camino , Procesando ), número de orden, fecha y total. Un botón `>` indica la acción de ver detalle.
 
 ![Mockup Historial](img/historial.jpeg)
 
@@ -230,10 +230,10 @@ Vista del perfil de usuario con:
 - Botón **"Editar Perfil"**
 
 **Menú de cuenta:**
-- 🕐 Historial de actividades → `historial.html`
-- ⚙️ Configuraciones → `configuraciones.html`
-- 📍 Direcciones → `direcciones.html`
-- 🚪 Cerrar sesión → `index.html`
+- Historial de actividades → `historial.html`
+- Configuraciones → `configuraciones.html`
+- Direcciones → `direcciones.html`
+- Cerrar sesión → `index.html`
 
 ####  Mockup — Perfil
 
